@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="FURLUXE Help Center — Get help with appointments, grooming, packages, pet preparation and more.">
+
+  <title>Help Center | FURLUXE</title>
+
+
+  <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+
+  <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <style>
+    /* =====================================================
+           PAGE
+        ====================================================== */
+
+    .help-page {
+      background: #f7f4ee;
+    }
+
+
+    /* =====================================================
+           HERO
+        ====================================================== */
+
+    .help-hero {
+      position: relative;
+
+      min-height: 470px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+      background: #18352f;
+
+      text-align: center;
+    }
+
+
+    .help-hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 650px;
+      height: 650px;
+
+      top: -390px;
+      right: -180px;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.2);
+
+      border-radius: 50%;
+    }
+
+
+    .help-hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 520px;
+      height: 520px;
+
+      left: -290px;
+      bottom: -360px;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+      border-radius: 50%;
+    }
+
+
+    .help-hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      width: 100%;
+
+      max-width: 850px;
+
+      margin: auto;
+    }
+
+
+    .help-tag {
+      color: #d8bc8b;
+
+      font-size: 0.65rem;
+
+      font-weight: 700;
+
+      letter-spacing: 2.5px;
+    }
+
+
+    .help-hero h1 {
+      margin: 18px 0 0;
+
+      color: #ffffff;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(3rem, 7vw, 5.5rem);
+
+      line-height: 1.05;
+
+      font-weight: 500;
+    }
+
+
+    .help-hero h1 span {
+      color: #d8bc8b;
+
+      font-style: italic;
+    }
+
+
+    .help-hero p {
+      max-width: 610px;
+
+      margin: 20px auto 0;
+
+      color:
+        rgba(255, 255, 255, 0.65);
+
+      font-size: 0.72rem;
+
+      line-height: 1.85;
+    }
+
+
+    /* =====================================================
+           SEARCH
+        ====================================================== */
+
+    .help-search {
+      display: flex;
+
+      max-width: 610px;
+
+      margin: 30px auto 0;
+
+      padding: 7px;
+
+      background: #ffffff;
+
+      border-radius: 60px;
+
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.16);
+    }
+
+
+    .help-search input {
+      flex: 1;
+
+      min-width: 0;
+
+      border: 0;
+
+      outline: 0;
+
+      padding: 13px 20px;
+
+      background: transparent;
+
+      color: #18352f;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 0.68rem;
+    }
+
+
+    .help-search input::placeholder {
+      color: #9a9f9c;
+    }
+
+
+    .help-search button {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      border: 0;
+
+      padding: 13px 21px;
+
+      border-radius: 50px;
+
+      background: #c6a26a;
+
+      color: #ffffff;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 0.62rem;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+
+    .help-search button:hover {
+      background: #d8bc8b;
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =====================================================
+           MAIN
+        ====================================================== */
+
+    .help-section {
+      padding: 90px 0;
+    }
+
+
+    .help-heading {
+      max-width: 650px;
+
+      margin: 0 auto 45px;
+
+      text-align: center;
+    }
+
+
+    .help-heading small {
+      color: #b28c55;
+
+      font-size: 0.6rem;
+
+      font-weight: 700;
+
+      letter-spacing: 2px;
+    }
+
+
+    .help-heading h2 {
+      margin: 12px 0;
+
+      color: #18352f;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2rem, 4vw, 3rem);
+
+      font-weight: 500;
+    }
+
+
+    .help-heading h2 span {
+      color: #c6a26a;
+
+      font-style: italic;
+    }
+
+
+    .help-heading p {
+      margin: 0;
+
+      color: #737b77;
+
+      font-size: 0.7rem;
+
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+           HELP CARDS
+        ====================================================== */
+
+    .help-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .help-card {
+      padding: 30px;
+
+      background: #ffffff;
+
+      border:
+        1px solid rgba(24, 53, 47, 0.07);
+
+      border-radius: 24px;
+
+      transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+
+    .help-card:hover {
+      transform: translateY(-7px);
+
+      box-shadow:
+        0 20px 45px rgba(24, 53, 47, 0.08);
+    }
+
+
+    .help-card-icon {
+      width: 52px;
+      height: 52px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin-bottom: 22px;
+
+      border-radius: 16px;
+
+      background:
+        rgba(198, 162, 106, 0.12);
+
+      color: #b28c55;
+
+      font-size: 1.1rem;
+
+      transition:
+        transform 0.3s ease;
+    }
+
+
+    .help-card:hover .help-card-icon {
+      transform:
+        rotate(-5deg) scale(1.05);
+    }
+
+
+    .help-card h3 {
+      margin: 0 0 10px;
+
+      color: #18352f;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.3rem;
+
+      font-weight: 500;
+    }
+
+
+    .help-card p {
+      margin: 0 0 18px;
+
+      color: #747c78;
+
+      font-size: 0.67rem;
+
+      line-height: 1.8;
+    }
+
+
+    .help-card a {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      color: #a17d48;
+
+      text-decoration: none;
+
+      font-size: 0.6rem;
+
+      font-weight: 700;
+    }
+
+
+    .help-card a i {
+      transition:
+        transform 0.3s ease;
+    }
+
+
+    .help-card a:hover i {
+      transform: translateX(4px);
+    }
+
+
+    /* =====================================================
+           QUICK HELP
+        ====================================================== */
+
+    .quick-help {
+      margin-top: 70px;
+
+      padding: 45px;
+
+      border-radius: 28px;
+
+      background: #ffffff;
+
+      text-align: center;
+
+      box-shadow:
+        0 15px 45px rgba(24, 53, 47, 0.045);
+    }
+
+
+    .quick-help-icon {
+      width: 58px;
+      height: 58px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin: 0 auto 17px;
+
+      border-radius: 50%;
+
+      background: #18352f;
+
+      color: #d8bc8b;
+
+      font-size: 1.1rem;
+    }
+
+
+    .quick-help h2 {
+      margin: 0 0 10px;
+
+      color: #18352f;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 2rem;
+
+      font-weight: 500;
+    }
+
+
+    .quick-help p {
+      max-width: 570px;
+
+      margin: 0 auto;
+
+      color: #737b77;
+
+      font-size: 0.68rem;
+
+      line-height: 1.8;
+    }
+
+
+    .quick-help-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 25px;
+    }
+
+
+    .help-btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 13px 21px;
+
+      border-radius: 50px;
+
+      text-decoration: none;
+
+      font-size: 0.6rem;
+
+      font-weight: 700;
+
+      transition:
+        transform 0.3s ease;
+    }
+
+
+    .help-btn:hover {
+      transform: translateY(-3px);
+    }
+
+
+    .help-btn-primary {
+      background: #18352f;
+
+      color: #ffffff;
+    }
+
+
+    .help-btn-secondary {
+      background: #c6a26a;
+
+      color: #ffffff;
+    }
+
+
+    /* =====================================================
+           SEARCH RESULTS
+        ====================================================== */
+
+    .help-no-results {
+      display: none;
+
+      margin-top: 25px;
+
+      color: #747c78;
+
+      text-align: center;
+
+      font-size: 0.7rem;
+    }
+
+
+    /* =====================================================
+           MOBILE
+        ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .help-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .help-hero {
+        min-height: 500px;
+      }
+
+
+      .help-search {
+        flex-direction: column;
+
+        padding: 8px;
+
+        border-radius: 22px;
+      }
+
+
+      .help-search input {
+        padding: 14px;
+      }
+
+
+      .help-search button {
+        justify-content: center;
+
+        width: 100%;
+      }
+
+
+      .help-section {
+        padding: 65px 0;
+      }
+
+
+      .help-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .help-card {
+        padding: 25px;
+      }
+
+
+      .quick-help {
+        padding: 30px 20px;
+
+        border-radius: 22px;
+      }
+
+
+      .quick-help h2 {
+        font-size: 1.7rem;
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body class="help-page">
+
+
+  <!-- =====================================================
+         LOADER
+    ====================================================== -->
+
+  <div class="page-loader">
+
+    <div class="loader-content">
+
+      <div class="loader-paw">
+
+        <i class="fa-solid fa-paw"></i>
+
+      </div>
+
+      <h2>
+        FURLUXE
+      </h2>
+
+      <p>
+        Luxury Grooming. Exceptional Care.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+  <header class="header">
+
+    <nav class="navbar">
+
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-mark">
+
+          <i class="fa-solid fa-paw"></i>
+
+        </span>
+
+        <span class="logo-text">
+          FURLUXE
+        </span>
+
+      </a>
+
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="services.html">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="grooming.html">
+            Grooming
+          </a>
+        </li>
+
+        <li>
+          <a href="packages.html">
+            Packages
+          </a>
+        </li>
+
+        <li>
+          <a href="team.html">
+            Our Groomers
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="reviews.html">
+            Reviews
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+
+        <li>
+          <a href="faq.html">
+            FAQ
+          </a>
+        </li>
+
+      </ul>
+
+
+      <a href="appointment.html" class="nav-book-btn">
+
+        Book Appointment
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+  <main>
+
+
+    <!-- =================================================
+             HERO
+        ================================================== -->
+
+    <section class="help-hero">
+
+      <div class="container">
+
+        <div class="help-hero-content reveal">
+
+          <div class="help-tag">
+            FURLUXE SUPPORT
+          </div>
+
+
+          <h1>
+            How can we
+            <span>help?</span>
+          </h1>
+
+
+          <p>
+            Looking for help with an appointment,
+            grooming service, package or preparing
+            your pet? Start here.
+          </p>
+
+
+          <form class="help-search" id="helpSearch">
+
+            <input type="search" id="helpSearchInput" placeholder="Search for help..." aria-label="Search help topics">
+
+
+            <button type="submit">
+
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+              Search
+
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             HELP TOPICS
+        ================================================== -->
+
+    <section class="help-section">
+
+      <div class="container">
+
+
+        <div class="help-heading reveal">
+
+          <small>
+            FIND YOUR ANSWER
+          </small>
+
+
+          <h2>
+            What can we
+            <span>help with?</span>
+          </h2>
+
+
+          <p>
+            Choose a topic below and find the information
+            you need for a smoother FURLUXE experience.
+          </p>
+
+        </div>
+
+
+        <div class="help-grid" id="helpGrid">
+
+
+          <!-- CARD 01 -->
+
+          <article class="help-card reveal" data-search="appointment booking schedule reschedule cancel">
+
+            <div class="help-card-icon">
+
+              <i class="fa-regular fa-calendar-check"></i>
+
+            </div>
+
+
+            <h3>
+              Appointments
+            </h3>
+
+
+            <p>
+              Need help booking, rescheduling or
+              understanding your grooming appointment?
+            </p>
+
+
+            <a href="appointment.html">
+
+              Book an Appointment
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+
+          <!-- CARD 02 -->
+
+          <article class="help-card reveal" data-search="grooming services bath haircut nail paw coat">
+
+            <div class="help-card-icon">
+
+              <i class="fa-solid fa-scissors"></i>
+
+            </div>
+
+
+            <h3>
+              Grooming Services
+            </h3>
+
+
+            <p>
+              Explore our grooming services and learn
+              what may be included in your pet's visit.
+            </p>
+
+
+            <a href="services.html">
+
+              Explore Services
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+
+          <!-- CARD 03 -->
+
+          <article class="help-card reveal" data-search="packages pricing membership grooming package">
+
+            <div class="help-card-icon">
+
+              <i class="fa-solid fa-box-open"></i>
+
+            </div>
+
+
+            <h3>
+              Packages & Pricing
+            </h3>
+
+
+            <p>
+              Compare our available grooming packages
+              and find an option that suits your pet.
+            </p>
+
+
+            <a href="packages.html">
+
+              View Packages
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+
+          <!-- CARD 04 -->
+
+          <article class="help-card reveal" data-search="prepare preparation pet grooming before appointment">
+
+            <div class="help-card-icon">
+
+              <i class="fa-solid fa-paw"></i>
+
+            </div>
+
+
+            <h3>
+              Prepare Your Pet
+            </h3>
+
+
+            <p>
+              Helpful information for getting your pet
+              ready before their grooming appointment.
+            </p>
+
+
+            <a href="grooming.html">
+
+              Grooming Guide
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+
+          <!-- CARD 05 -->
+
+          <article class="help-card reveal" data-search="faq frequently asked questions common questions">
+
+            <div class="help-card-icon">
+
+              <i class="fa-regular fa-circle-question"></i>
+
+            </div>
+
+
+            <h3>
+              FAQs
+            </h3>
+
+
+            <p>
+              Find quick answers to common questions
+              about FURLUXE and our grooming services.
+            </p>
+
+
+            <a href="faq.html">
+
+              Visit FAQ
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+
+          <!-- CARD 06 -->
+
+          <article class="help-card reveal" data-search="contact support message help team">
+
+            <div class="help-card-icon">
+
+              <i class="fa-solid fa-headset"></i>
+
+            </div>
+
+
+            <h3>
+              Contact Support
+            </h3>
+
+
+            <p>
+              Still need help? Send us a message and
+              our team can assist with your question.
+            </p>
+
+
+            <a href="contact.html">
+
+              Contact Us
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+
+        </div>
+
+
+        <p class="help-no-results" id="helpNoResults">
+
+          No matching help topic found.
+          Try another search.
+
+        </p>
+
+
+        <!-- =================================================
+                     QUICK SUPPORT
+                ================================================== -->
+
+        <div class="quick-help reveal">
+
+          <div class="quick-help-icon">
+
+            <i class="fa-solid fa-heart"></i>
+
+          </div>
+
+
+          <h2>
+            Still need a little help?
+          </h2>
+
+
+          <p>
+            No worries. Our team is here to help you
+            with appointments, grooming questions and
+            anything else you may need before your
+            pet's visit.
+          </p>
+
+
+          <div class="quick-help-buttons">
+
+
+            <a href="contact.html" class="help-btn help-btn-primary">
+
+              <i class="fa-solid fa-envelope"></i>
+
+              Contact Us
+
+            </a>
+
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVi7H_4viI_qknM3I5aGoMzQg_nb0Ivj_2zgHNUkM_BTxi_A/viewform"
+              class="help-btn help-btn-secondary" target="_blank" rel="noopener noreferrer">
+
+              <i class="fa-solid fa-file-lines"></i>
+
+              Submit a Request
+
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo footer-logo">
+
+            <span class="logo-mark">
+
+              <i class="fa-solid fa-paw"></i>
+
+            </span>
+
+            <span class="logo-text">
+              FURLUXE
+            </span>
+
+          </a>
+
+
+          <p>
+            Luxury grooming with a softer touch.
+            Thoughtful care for the pets who make
+            life a little better.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+
+              <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="Facebook">
+
+              <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="YouTube">
+
+              <i class="fa-brands fa-youtube"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="WhatsApp">
+
+              <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="grooming.html">
+            Grooming
+          </a>
+
+          <a href="packages.html">
+            Packages
+          </a>
+
+        </div>
+
+
+        <!-- FURLUXE -->
+
+        <div class="footer-column">
+
+          <h4>
+            FURLUXE
+          </h4>
+
+          <a href="team.html">
+            Our Groomers
+          </a>
+
+          <a href="about.html">
+            Our Story
+          </a>
+
+          <a href="reviews.html">
+            Reviews
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+        </div>
+
+
+        <!-- SUPPORT -->
+
+        <div class="footer-column">
+
+          <h4>
+            Support
+          </h4>
+
+          <a href="faq.html">
+            FAQ
+          </a>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+          <a href="help.html">
+            Help Center
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="footer-bottom">
+
+        <p>
+          ©
+          <span id="currentYear"></span>
+          FURLUXE.
+          All rights reserved.
+        </p>
+
+
+        <p>
+          Luxury Grooming. Exceptional Care.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+  <a href="https://wa.me/919999999999?text=Hello%20FURLUXE%2C%20I%20need%20some%20help." class="whatsapp-float"
+    target="_blank" rel="noopener noreferrer" aria-label="Chat with FURLUXE on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>
+      Chat with us
+    </span>
+
+  </a>
+
+
+  <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+  <button class="back-to-top" type="button" aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- =====================================================
+         HELP SEARCH JAVASCRIPT
+    ====================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+
+        /* ============================================
+           CURRENT YEAR
+        ============================================ */
+
+        const year =
+          document.getElementById(
+            "currentYear"
+          );
+
+
+        if (year) {
+
+          year.textContent =
+            new Date().getFullYear();
+
+        }
+
+
+        /* ============================================
+           HELP SEARCH
+        ============================================ */
+
+        const searchForm =
+          document.getElementById(
+            "helpSearch"
+          );
+
+
+        const searchInput =
+          document.getElementById(
+            "helpSearchInput"
+          );
+
+
+        const helpCards =
+          document.querySelectorAll(
+            ".help-card"
+          );
+
+
+        const noResults =
+          document.getElementById(
+            "helpNoResults"
+          );
+
+
+        function searchHelp() {
+
+          const query =
+            searchInput.value
+              .trim()
+              .toLowerCase();
+
+
+          let visibleCards = 0;
+
+
+          helpCards.forEach(
+            function (card) {
+
+              const text =
+                (
+                  card.innerText +
+                  " " +
+                  card.dataset.search
+                ).toLowerCase();
+
+
+              if (
+                query === "" ||
+                text.includes(query)
+              ) {
+
+                card.style.display =
+                  "";
+
+                visibleCards++;
+
+              } else {
+
+                card.style.display =
+                  "none";
+
+              }
+
+            }
+          );
+
+
+          if (
+            noResults
+          ) {
+
+            noResults.style.display =
+              visibleCards === 0
+                ? "block"
+                : "none";
+
+          }
+
+        }
+
+
+        if (searchForm) {
+
+          searchForm.addEventListener(
+            "submit",
+            function (event) {
+
+              event.preventDefault();
+
+              searchHelp();
+
+            }
+          );
+
+        }
+
+
+        if (searchInput) {
+
+          searchInput.addEventListener(
+            "input",
+            searchHelp
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+  <!-- =====================================================
+         MAIN SCRIPT
+    ====================================================== -->
+
+  <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

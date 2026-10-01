@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Meet the caring grooming team at FURLUXE. Experienced groomers dedicated to gentle, thoughtful and premium pet care.">
+
+  <title>Our Groomers | FURLUXE</title>
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <style>
+    /* =====================================================
+           TEAM PAGE
+        ====================================================== */
+
+    .team-page {
+      background: var(--ivory);
+    }
+
+
+    /* =====================================================
+           HERO
+        ====================================================== */
+
+    .team-hero {
+      position: relative;
+
+      min-height: 570px;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      background: var(--forest);
+    }
+
+
+    .team-hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 600px;
+      height: 600px;
+
+      border: 1px solid rgba(198, 162, 106, 0.16);
+
+      border-radius: 50%;
+
+      right: -220px;
+      top: -230px;
+    }
+
+
+    .team-hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 380px;
+      height: 380px;
+
+      border: 1px solid rgba(255, 255, 255, 0.06);
+
+      border-radius: 50%;
+
+      left: -180px;
+      bottom: -220px;
+    }
+
+
+    .team-hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 760px;
+
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+
+    .team-hero .section-tag {
+      color: var(--gold-light);
+    }
+
+
+    .team-hero h1 {
+      margin-top: 20px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(3rem, 7vw, 5.8rem);
+
+      line-height: 0.98;
+
+      letter-spacing: -0.04em;
+    }
+
+
+    .team-hero h1 span {
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .team-hero p {
+      max-width: 610px;
+
+      margin: 25px auto 0;
+
+      color:
+        rgba(255, 255, 255, 0.63);
+
+      line-height: 1.8;
+    }
+
+
+    .hero-paw {
+      position: absolute;
+
+      bottom: 50px;
+      right: 12%;
+
+      width: 65px;
+      height: 65px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid rgba(198, 162, 106, 0.3);
+
+      border-radius: 50%;
+
+      color: var(--gold-light);
+
+      font-size: 1.3rem;
+
+      animation:
+        floatingPaw 4s ease-in-out infinite;
+    }
+
+
+    @keyframes floatingPaw {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-5deg);
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(5deg);
+      }
+
+    }
+
+
+    /* =====================================================
+           INTRO
+        ====================================================== */
+
+    .team-intro {
+      padding: 95px 0 55px;
+
+      text-align: center;
+    }
+
+
+    .team-intro-content {
+      max-width: 720px;
+
+      margin: auto;
+    }
+
+
+    .team-intro h2 {
+      margin-top: 18px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.2rem, 4vw, 3.5rem);
+
+      line-height: 1.1;
+    }
+
+
+    .team-intro h2 span {
+      color: var(--gold);
+
+      font-style: italic;
+    }
+
+
+    .team-intro p {
+      margin-top: 18px;
+
+      color: var(--muted);
+
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+           TEAM GRID
+        ====================================================== */
+
+    .team-section {
+      padding: 30px 0 110px;
+    }
+
+
+    .team-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+
+    /* =====================================================
+           TEAM CARD
+        ====================================================== */
+
+    .team-card {
+      overflow: hidden;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 24px;
+
+      background: var(--white);
+
+      transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+    }
+
+
+    .team-card:hover {
+      transform:
+        translateY(-10px);
+
+      box-shadow:
+        0 25px 60px rgba(24, 53, 47, 0.11);
+    }
+
+
+    .team-image {
+      position: relative;
+
+      height: 390px;
+
+      overflow: hidden;
+
+      background: #e9e2d5;
+    }
+
+
+    .team-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.7s ease;
+    }
+
+
+    .team-card:hover .team-image img {
+      transform: scale(1.05);
+    }
+
+
+    .team-image::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(to top,
+          rgba(24, 53, 47, 0.25),
+          transparent 45%);
+
+      pointer-events: none;
+    }
+
+
+    .team-badge {
+      position: absolute;
+
+      z-index: 2;
+
+      left: 18px;
+      top: 18px;
+
+      padding: 8px 13px;
+
+      border-radius: 50px;
+
+      background:
+        rgba(255, 255, 255, 0.92);
+
+      color: var(--forest);
+
+      font-size: 0.55rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.06em;
+
+      text-transform: uppercase;
+    }
+
+
+    .team-social {
+      position: absolute;
+
+      z-index: 3;
+
+      right: 18px;
+      bottom: 18px;
+
+      display: flex;
+
+      gap: 7px;
+
+      opacity: 0;
+
+      transform:
+        translateY(10px);
+
+      transition:
+        all 0.3s ease;
+    }
+
+
+    .team-card:hover .team-social {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    .team-social a {
+      width: 37px;
+      height: 37px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255, 255, 255, 0.94);
+
+      color: var(--forest);
+
+      font-size: 0.7rem;
+
+      text-decoration: none;
+
+      transition:
+        background 0.25s ease,
+        color 0.25s ease;
+    }
+
+
+    .team-social a:hover {
+      background: var(--gold);
+
+      color: var(--white);
+    }
+
+
+    /* =====================================================
+           TEAM CONTENT
+        ====================================================== */
+
+    .team-content {
+      padding: 27px 25px 30px;
+    }
+
+
+    .team-role {
+      color: var(--gold);
+
+      font-size: 0.56rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.1em;
+
+      text-transform: uppercase;
+    }
+
+
+    .team-content h3 {
+      margin-top: 8px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.55rem;
+    }
+
+
+    .team-content p {
+      margin-top: 10px;
+
+      color: var(--muted);
+
+      font-size: 0.67rem;
+
+      line-height: 1.7;
+    }
+
+
+    .specialties {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: 17px;
+    }
+
+
+    .specialty {
+      padding: 7px 10px;
+
+      border-radius: 50px;
+
+      background: var(--beige-light);
+
+      color: var(--forest);
+
+      font-size: 0.52rem;
+
+      font-weight: 600;
+    }
+
+
+    /* =====================================================
+           TEAM VALUES
+        ====================================================== */
+
+    .team-values {
+      padding: 100px 0;
+
+      background: var(--beige-light);
+    }
+
+
+    .values-header {
+      max-width: 650px;
+
+      margin: 0 auto 50px;
+
+      text-align: center;
+    }
+
+
+    .values-header h2 {
+      margin-top: 15px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.1rem, 4vw, 3.3rem);
+    }
+
+
+    .values-header h2 span {
+      color: var(--gold);
+
+      font-style: italic;
+    }
+
+
+    .values-header p {
+      margin-top: 15px;
+
+      color: var(--muted);
+
+      line-height: 1.7;
+    }
+
+
+    .values-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .value-card {
+      padding: 32px 27px;
+
+      border:
+        1px solid rgba(24, 53, 47, 0.08);
+
+      border-radius: 20px;
+
+      background:
+        rgba(255, 255, 255, 0.55);
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+
+    .value-card:hover {
+      transform:
+        translateY(-6px);
+
+      background: var(--white);
+    }
+
+
+    .value-icon {
+      width: 48px;
+      height: 48px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--forest);
+
+      color: var(--gold-light);
+
+      font-size: 0.85rem;
+    }
+
+
+    .value-card h3 {
+      margin-top: 20px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.25rem;
+    }
+
+
+    .value-card p {
+      margin-top: 9px;
+
+      color: var(--muted);
+
+      font-size: 0.65rem;
+
+      line-height: 1.7;
+    }
+
+
+    /* =====================================================
+           CTA
+        ====================================================== */
+
+    .team-cta {
+      padding: 100px 0;
+
+      background: var(--forest);
+
+      text-align: center;
+    }
+
+
+    .team-cta-content {
+      max-width: 680px;
+
+      margin: auto;
+    }
+
+
+    .team-cta .section-tag {
+      color: var(--gold-light);
+    }
+
+
+    .team-cta h2 {
+      margin-top: 17px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.2rem, 5vw, 3.8rem);
+
+      line-height: 1.1;
+    }
+
+
+    .team-cta h2 span {
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .team-cta p {
+      margin: 17px auto 30px;
+
+      color:
+        rgba(255, 255, 255, 0.58);
+
+      line-height: 1.7;
+    }
+
+
+    .team-cta .cta-button {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 15px 25px;
+
+      border-radius: 50px;
+
+      background: var(--gold);
+
+      color: var(--white);
+
+      font-size: 0.65rem;
+
+      font-weight: 700;
+
+      text-decoration: none;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+
+    .team-cta .cta-button:hover {
+      transform:
+        translateY(-3px);
+
+      background:
+        var(--gold-light);
+    }
+
+
+    /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+    @media (max-width: 950px) {
+
+      .team-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .values-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .team-hero {
+        min-height: 520px;
+      }
+
+
+      .hero-paw {
+        right: 8%;
+
+        width: 50px;
+        height: 50px;
+      }
+
+
+      .team-intro {
+        padding:
+          70px 0 35px;
+      }
+
+
+      .team-section {
+        padding:
+          20px 0 75px;
+      }
+
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .team-image {
+        height: 430px;
+      }
+
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .team-values,
+      .team-cta {
+        padding: 75px 0;
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body class="team-page">
+
+
+  <!-- =====================================================
+         PAGE LOADER
+    ====================================================== -->
+
+  <div class="page-loader">
+
+    <div class="loader-content">
+
+      <div class="loader-paw">
+        <i class="fa-solid fa-paw"></i>
+      </div>
+
+      <h2>FURLUXE</h2>
+
+      <p>
+        Luxury Grooming. Exceptional Care.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+  <header class="header">
+
+    <nav class="navbar">
+
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-mark">
+          <i class="fa-solid fa-paw"></i>
+        </span>
+
+        <span class="logo-text">
+          FURLUXE
+        </span>
+
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="index.html" class="active">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="services.html">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="grooming.html">
+            Grooming
+          </a>
+        </li>
+
+        <li>
+          <a href="packages.html">
+            Packages
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+
+      <a href="appointment.html" class="nav-book-btn">
+
+        Book Appointment
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+
+      <button class="menu-toggle" aria-label="Open navigation menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =================================================
+             HERO
+        ================================================== -->
+
+    <section class="team-hero">
+
+      <div class="container">
+
+        <div class="team-hero-content reveal">
+
+          <div class="section-tag">
+            THE FURLUXE TEAM
+          </div>
+
+
+          <h1>
+            Meet the people
+            <span>behind the care.</span>
+          </h1>
+
+
+          <p>
+            Skilled hands, gentle hearts and a
+            genuine love for animals. Our groomers
+            are here to make every visit feel safe,
+            calm and special.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-paw">
+
+        <i class="fa-solid fa-paw"></i>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             INTRO
+        ================================================== -->
+
+    <section class="team-intro">
+
+      <div class="container">
+
+        <div class="team-intro-content reveal">
+
+          <div class="section-tag">
+            OUR PEOPLE
+          </div>
+
+
+          <h2>
+            Grooming is a skill.
+            <span>Care is everything.</span>
+          </h2>
+
+
+          <p>
+            At FURLUXE, we believe a beautiful
+            groom starts with a comfortable pet.
+            Our team combines professional grooming
+            techniques with patience, kindness and
+            attention to every pet's personality.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             TEAM
+        ================================================== -->
+
+    <section class="team-section">
+
+      <div class="container">
+
+        <div class="team-grid">
+
+
+          <!-- =====================================
+                         TEAM MEMBER 01
+                    ====================================== -->
+
+          <article class="team-card reveal">
+
+            <div class="team-image">
+
+              <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?auto=format&fit=crop&w=900&q=85"
+                alt="Professional pet groomer" loading="lazy">
+
+
+              <span class="team-badge">
+                Founder
+              </span>
+
+
+              <div class="team-social">
+
+                <a href="#" aria-label="Instagram">
+
+                  <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a href="#" aria-label="Profile">
+
+                  <i class="fa-solid fa-user"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="team-content">
+
+              <span class="team-role">
+                Founder & Lead Groomer
+              </span>
+
+
+              <h3>
+                Ananya Rao
+              </h3>
+
+
+              <p>
+                With a calm approach and an eye
+                for detail, Ananya brings the
+                FURLUXE grooming experience to
+                life.
+              </p>
+
+
+              <div class="specialties">
+
+                <span class="specialty">
+                  Full Grooming
+                </span>
+
+                <span class="specialty">
+                  Breed Styling
+                </span>
+
+                <span class="specialty">
+                  Spa Care
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         TEAM MEMBER 02
+                    ====================================== -->
+
+          <article class="team-card reveal">
+
+            <div class="team-image">
+
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNK-kPJOGa32txXheeRER-tcCxp2ZabZx_Lpuy4c20aA&s=10"
+                alt="Pet care professional" loading="lazy">
+
+
+              <span class="team-badge">
+                Grooming
+              </span>
+
+
+              <div class="team-social">
+
+                <a href="#" aria-label="Instagram">
+
+                  <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a href="#" aria-label="Profile">
+
+                  <i class="fa-solid fa-user"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="team-content">
+
+              <span class="team-role">
+                Senior Groomer
+              </span>
+
+
+              <h3>
+                Rohan Mehta
+              </h3>
+
+
+              <p>
+                Rohan specialises in gentle,
+                practical grooming sessions and
+                loves working with pets who need
+                a little extra patience.
+              </p>
+
+
+              <div class="specialties">
+
+                <span class="specialty">
+                  De-Shedding
+                </span>
+
+                <span class="specialty">
+                  Coat Care
+                </span>
+
+                <span class="specialty">
+                  Puppy Grooming
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         TEAM MEMBER 03
+                    ====================================== -->
+
+          <article class="team-card reveal">
+
+            <div class="team-image">
+
+              <img
+                src="https://media.gettyimages.com/id/485251750/photo/young-redhead-woman-hug-her-small-mixed-breed-dog.jpg?s=612x612&w=0&k=20&c=vJOtmUQ2emhaGIW1C_lb7J8WibZ6fKh7RdYAYS8P0D8="
+                alt="Pet grooming specialist" loading="lazy">
+
+
+              <span class="team-badge">
+                Specialist
+              </span>
+
+
+              <div class="team-social">
+
+                <a href="#" aria-label="Instagram">
+
+                  <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a href="#" aria-label="Profile">
+
+                  <i class="fa-solid fa-user"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="team-content">
+
+              <span class="team-role">
+                Pet Care Specialist
+              </span>
+
+
+              <h3>
+                Meera Kapoor
+              </h3>
+
+
+              <p>
+                Meera has a naturally gentle
+                approach and focuses on making
+                every grooming session relaxed
+                and positive.
+              </p>
+
+
+              <div class="specialties">
+
+                <span class="specialty">
+                  Bath & Spa
+                </span>
+
+                <span class="specialty">
+                  Paw Care
+                </span>
+
+                <span class="specialty">
+                  Cat Grooming
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         TEAM MEMBER 04
+                    ====================================== -->
+
+          <article class="team-card reveal">
+
+            <div class="team-image">
+
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85"
+                alt="Pet grooming team member" loading="lazy">
+
+
+              <span class="team-badge">
+                Grooming
+              </span>
+
+
+              <div class="team-social">
+
+                <a href="#" aria-label="Instagram">
+
+                  <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a href="#" aria-label="Profile">
+
+                  <i class="fa-solid fa-user"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="team-content">
+
+              <span class="team-role">
+                Groomer
+              </span>
+
+
+              <h3>
+                Arjun Nair
+              </h3>
+
+
+              <p>
+                Arjun enjoys creating comfortable
+                grooming experiences while paying
+                close attention to coat health and
+                finishing details.
+              </p>
+
+
+              <div class="specialties">
+
+                <span class="specialty">
+                  Bathing
+                </span>
+
+                <span class="specialty">
+                  Nail Care
+                </span>
+
+                <span class="specialty">
+                  Coat Styling
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         TEAM MEMBER 05
+                    ====================================== -->
+
+          <article class="team-card reveal">
+
+            <div class="team-image">
+
+              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=85"
+                alt="Pet care team member" loading="lazy">
+
+
+              <span class="team-badge">
+                Care
+              </span>
+
+
+              <div class="team-social">
+
+                <a href="#" aria-label="Instagram">
+
+                  <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a href="#" aria-label="Profile">
+
+                  <i class="fa-solid fa-user"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="team-content">
+
+              <span class="team-role">
+                Pet Care Associate
+              </span>
+
+
+              <h3>
+                Diya Sharma
+              </h3>
+
+
+              <p>
+                Diya helps pets feel comfortable
+                before, during and after their
+                grooming session.
+              </p>
+
+
+              <div class="specialties">
+
+                <span class="specialty">
+                  Pet Comfort
+                </span>
+
+                <span class="specialty">
+                  Bath Care
+                </span>
+
+                <span class="specialty">
+                  Puppy Care
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         TEAM MEMBER 06
+                    ====================================== -->
+
+          <article class="team-card reveal">
+
+            <div class="team-image">
+
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=85"
+                alt="Pet grooming professional" loading="lazy">
+
+
+              <span class="team-badge">
+                Grooming
+              </span>
+
+
+              <div class="team-social">
+
+                <a href="#" aria-label="Instagram">
+
+                  <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a href="#" aria-label="Profile">
+
+                  <i class="fa-solid fa-user"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="team-content">
+
+              <span class="team-role">
+                Groomer
+              </span>
+
+
+              <h3>
+                Kavya Menon
+              </h3>
+
+
+              <p>
+                Kavya brings a patient and
+                detail-focused approach to every
+                grooming appointment.
+              </p>
+
+
+              <div class="specialties">
+
+                <span class="specialty">
+                  Styling
+                </span>
+
+                <span class="specialty">
+                  Spa Treatments
+                </span>
+
+                <span class="specialty">
+                  Paw Care
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             VALUES
+        ================================================== -->
+
+    <section class="team-values">
+
+      <div class="container">
+
+        <div class="values-header reveal">
+
+          <div class="section-tag">
+            OUR APPROACH
+          </div>
+
+
+          <h2>
+            More than grooming.
+            <span>It's personal.</span>
+          </h2>
+
+
+          <p>
+            Every pet is different. That's why our
+            team takes time to understand their
+            personality, comfort level and grooming
+            needs.
+          </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+          <div class="value-card reveal">
+
+            <div class="value-icon">
+
+              <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+
+            <h3>
+              Gentle First
+            </h3>
+
+
+            <p>
+              We prioritise comfort and patience
+              throughout every grooming session.
+            </p>
+
+          </div>
+
+
+          <div class="value-card reveal">
+
+            <div class="value-icon">
+
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            </div>
+
+
+            <h3>
+              Detail Driven
+            </h3>
+
+
+            <p>
+              From clean paws to a beautiful coat,
+              we pay attention to the little things.
+            </p>
+
+          </div>
+
+
+          <div class="value-card reveal">
+
+            <div class="value-icon">
+
+              <i class="fa-solid fa-shield-heart"></i>
+
+            </div>
+
+
+            <h3>
+              Trust Matters
+            </h3>
+
+
+            <p>
+              We want both pets and their humans
+              to feel comfortable from arrival to
+              pickup.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             CTA
+        ================================================== -->
+
+    <section class="team-cta">
+
+      <div class="container">
+
+        <div class="team-cta-content reveal">
+
+          <div class="section-tag">
+            READY WHEN THEY ARE
+          </div>
+
+
+          <h2>
+            Give your pet a
+            <span>FURLUXE day.</span>
+          </h2>
+
+
+          <p>
+            Choose their grooming experience and
+            let our team take care of the details.
+          </p>
+
+
+          <a href="appointment.html" class="cta-button">
+
+            Book an Appointment
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo footer-logo">
+
+            <span class="logo-mark">
+              <i class="fa-solid fa-paw"></i>
+            </span>
+
+            <span class="logo-text">
+              FURLUXE
+            </span>
+
+          </a>
+
+
+          <p>
+            Luxury grooming with a softer touch.
+            Thoughtful care for the pets who make
+            life a little better.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+
+              <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="Facebook">
+
+              <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="YouTube">
+
+              <i class="fa-brands fa-youtube"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="WhatsApp">
+
+              <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="grooming.html">
+            Grooming
+          </a>
+
+          <a href="packages.html">
+            Packages
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            FURLUXE
+          </h4>
+
+          <a href="team.html">
+            Our Groomers
+          </a>
+
+          <a href="appointment.html">
+            Appointments
+          </a>
+
+          <a href="about.html">
+            About Us
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Support
+          </h4>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+          <a href="help.html">
+            Help Center
+          </a>
+
+          <a href="faq.html">
+            FAQs
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          ©
+          <span id="currentYear"></span>
+          FURLUXE.
+          All rights reserved.
+        </p>
+
+
+        <p>
+          Luxury Grooming. Exceptional Care.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+  <a href="https://wa.me/919999999999?text=Hello%20FURLUXE%2C%20I%20would%20like%20to%20know%20more%20about%20your%20groomers."
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with FURLUXE on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>
+      Chat with us
+    </span>
+
+  </a>
+
+
+  <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+  <button class="back-to-top" aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- Main JavaScript -->
+  <script src="js/script.js"></script>
+
+
+  <!-- Small page-specific script -->
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+        const year =
+          document.getElementById(
+            "currentYear"
+          );
+
+
+        if (year) {
+
+          year.textContent =
+            new Date().getFullYear();
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

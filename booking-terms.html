@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="FURLUXE Booking Terms — Appointment, cancellation, pet care and grooming booking guidelines.">
+
+  <title>Booking Terms | FURLUXE</title>
+
+
+  <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+
+  <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <style>
+    /* =====================================================
+           PAGE
+        ====================================================== */
+
+    .booking-terms-page {
+      background: #f7f4ee;
+    }
+
+
+    /* =====================================================
+           HERO
+        ====================================================== */
+
+    .booking-terms-hero {
+      position: relative;
+
+      min-height: 460px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+      background: #18352f;
+
+      text-align: center;
+    }
+
+
+    .booking-terms-hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 680px;
+      height: 680px;
+
+      top: -410px;
+      right: -210px;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.2);
+
+      border-radius: 50%;
+    }
+
+
+    .booking-terms-hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      left: -280px;
+      bottom: -350px;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+      border-radius: 50%;
+    }
+
+
+    .booking-terms-hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 800px;
+
+      margin: auto;
+    }
+
+
+    .booking-terms-tag {
+      color: #d8bc8b;
+
+      font-size: 0.65rem;
+
+      font-weight: 700;
+
+      letter-spacing: 2.5px;
+    }
+
+
+    .booking-terms-hero h1 {
+      margin: 18px 0 0;
+
+      color: #ffffff;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(3rem, 6vw, 5rem);
+
+      line-height: 1.05;
+
+      font-weight: 500;
+    }
+
+
+    .booking-terms-hero h1 span {
+      display: block;
+
+      color: #d8bc8b;
+
+      font-style: italic;
+    }
+
+
+    .booking-terms-hero p {
+      max-width: 610px;
+
+      margin: 20px auto 0;
+
+      color:
+        rgba(255, 255, 255, 0.64);
+
+      font-size: 0.7rem;
+
+      line-height: 1.85;
+    }
+
+
+    /* =====================================================
+           CONTENT SECTION
+        ====================================================== */
+
+    .booking-terms-section {
+      padding: 90px 0;
+    }
+
+
+    .booking-terms-layout {
+      display: grid;
+
+      grid-template-columns:
+        255px 1fr;
+
+      gap: 65px;
+
+      align-items: start;
+    }
+
+
+    /* =====================================================
+           SIDEBAR
+        ====================================================== */
+
+    .booking-terms-sidebar {
+      position: sticky;
+
+      top: 110px;
+
+      padding: 25px;
+
+      background: #ffffff;
+
+      border:
+        1px solid rgba(24, 53, 47, 0.08);
+
+      border-radius: 22px;
+    }
+
+
+    .booking-terms-sidebar h3 {
+      margin: 0 0 18px;
+
+      color: #18352f;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.15rem;
+
+      font-weight: 500;
+    }
+
+
+    .booking-terms-sidebar a {
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      padding: 8px 0;
+
+      color: #747c78;
+
+      text-decoration: none;
+
+      font-size: 0.62rem;
+
+      transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+
+    .booking-terms-sidebar a::before {
+      content: "";
+
+      width: 5px;
+      height: 5px;
+
+      flex-shrink: 0;
+
+      border-radius: 50%;
+
+      background: #c6a26a;
+
+      opacity: 0;
+
+      transition: opacity 0.3s ease;
+    }
+
+
+    .booking-terms-sidebar a:hover {
+      color: #18352f;
+
+      transform: translateX(3px);
+    }
+
+
+    .booking-terms-sidebar a:hover::before {
+      opacity: 1;
+    }
+
+
+    /* =====================================================
+           CONTENT CARD
+        ====================================================== */
+
+    .booking-terms-content {
+      max-width: 850px;
+
+      padding: 45px;
+
+      background: #ffffff;
+
+      border:
+        1px solid rgba(24, 53, 47, 0.08);
+
+      border-radius: 28px;
+
+      box-shadow:
+        0 20px 60px rgba(24, 53, 47, 0.045);
+    }
+
+
+    /* =====================================================
+           INTRO
+        ====================================================== */
+
+    .booking-intro {
+      padding-bottom: 30px;
+
+      margin-bottom: 35px;
+
+      border-bottom:
+        1px solid rgba(24, 53, 47, 0.08);
+    }
+
+
+    .booking-updated {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 8px 13px;
+
+      border-radius: 50px;
+
+      background:
+        rgba(198, 162, 106, 0.1);
+
+      color: #a9824b;
+
+      font-size: 0.58rem;
+
+      font-weight: 700;
+    }
+
+
+    .booking-intro h2 {
+      margin: 20px 0 12px;
+
+      color: #18352f;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2rem, 4vw, 2.8rem);
+
+      line-height: 1.15;
+
+      font-weight: 500;
+    }
+
+
+    .booking-intro h2 span {
+      color: #c6a26a;
+
+      font-style: italic;
+    }
+
+
+    .booking-intro p {
+      margin: 0;
+
+      color: #707975;
+
+      font-size: 0.72rem;
+
+      line-height: 1.85;
+    }
+
+
+    /* =====================================================
+           TERM BLOCK
+        ====================================================== */
+
+    .booking-term {
+      scroll-margin-top: 110px;
+
+      padding-bottom: 32px;
+
+      margin-bottom: 32px;
+
+      border-bottom:
+        1px solid rgba(24, 53, 47, 0.07);
+    }
+
+
+    .booking-term:last-of-type {
+      border-bottom: 0;
+
+      margin-bottom: 0;
+    }
+
+
+    .booking-term h3 {
+      display: flex;
+
+      align-items: center;
+
+      gap: 13px;
+
+      margin: 0 0 14px;
+
+      color: #18352f;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.4rem;
+
+      font-weight: 500;
+    }
+
+
+    .booking-number {
+      color: #c6a26a;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 0.6rem;
+
+      font-weight: 700;
+
+      letter-spacing: 1px;
+    }
+
+
+    .booking-term p {
+      margin: 0 0 12px;
+
+      color: #707975;
+
+      font-size: 0.7rem;
+
+      line-height: 1.9;
+    }
+
+
+    .booking-term p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    .booking-term ul {
+      margin: 12px 0;
+
+      padding-left: 20px;
+    }
+
+
+    .booking-term li {
+      margin-bottom: 8px;
+
+      color: #707975;
+
+      font-size: 0.69rem;
+
+      line-height: 1.8;
+    }
+
+
+    .booking-term li::marker {
+      color: #c6a26a;
+    }
+
+
+    /* =====================================================
+           IMPORTANT BOX
+        ====================================================== */
+
+    .booking-note {
+      display: flex;
+
+      gap: 16px;
+
+      margin-top: 18px;
+
+      padding: 21px;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.2);
+
+      border-radius: 18px;
+
+      background:
+        rgba(198, 162, 106, 0.07);
+    }
+
+
+    .booking-note-icon {
+      width: 42px;
+      height: 42px;
+
+      flex-shrink: 0;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: #18352f;
+
+      color: #d8bc8b;
+    }
+
+
+    .booking-note p {
+      margin: 0;
+
+      color: #68716d;
+
+      font-size: 0.67rem;
+
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+           BOOKING CHECKLIST
+        ====================================================== */
+
+    .booking-checklist {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 12px;
+
+      margin-top: 18px;
+    }
+
+
+    .booking-check {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      padding: 16px;
+
+      border-radius: 15px;
+
+      background: #f7f4ee;
+    }
+
+
+    .booking-check i {
+      margin-top: 2px;
+
+      color: #b28c55;
+
+      font-size: 0.72rem;
+    }
+
+
+    .booking-check span {
+      color: #68716d;
+
+      font-size: 0.64rem;
+
+      line-height: 1.7;
+    }
+
+
+    /* =====================================================
+           CTA
+        ====================================================== */
+
+    .booking-cta {
+      position: relative;
+
+      overflow: hidden;
+
+      margin-top: 40px;
+
+      padding: 35px;
+
+      border-radius: 24px;
+
+      background: #18352f;
+
+      text-align: center;
+    }
+
+
+    .booking-cta::before {
+      content: "";
+
+      position: absolute;
+
+      width: 260px;
+      height: 260px;
+
+      top: -160px;
+      right: -100px;
+
+      border:
+        1px solid rgba(216, 188, 139, 0.15);
+
+      border-radius: 50%;
+    }
+
+
+    .booking-cta>* {
+      position: relative;
+
+      z-index: 2;
+    }
+
+
+    .booking-cta-icon {
+      width: 48px;
+      height: 48px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin: 0 auto 15px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(198, 162, 106, 0.14);
+
+      color: #d8bc8b;
+    }
+
+
+    .booking-cta h3 {
+      margin: 0 0 8px;
+
+      color: #ffffff;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.5rem;
+
+      font-weight: 500;
+    }
+
+
+    .booking-cta p {
+      max-width: 530px;
+
+      margin: auto;
+
+      color:
+        rgba(255, 255, 255, 0.62);
+
+      font-size: 0.66rem;
+
+      line-height: 1.8;
+    }
+
+
+    .booking-cta-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 20px;
+    }
+
+
+    .booking-cta a {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 12px 19px;
+
+      border-radius: 50px;
+
+      text-decoration: none;
+
+      font-size: 0.6rem;
+
+      font-weight: 700;
+
+      transition:
+        transform 0.3s ease;
+    }
+
+
+    .booking-cta a:hover {
+      transform: translateY(-3px);
+    }
+
+
+    .booking-cta-primary {
+      background: #c6a26a;
+
+      color: #ffffff;
+    }
+
+
+    .booking-cta-secondary {
+      background:
+        rgba(255, 255, 255, 0.1);
+
+      color: #ffffff;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.15);
+    }
+
+
+    /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .booking-terms-layout {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+      }
+
+
+      .booking-terms-sidebar {
+        position: static;
+      }
+
+
+      .booking-terms-sidebar a {
+        display: inline-flex;
+
+        margin-right: 17px;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .booking-terms-hero {
+        min-height: 420px;
+      }
+
+
+      .booking-terms-section {
+        padding: 60px 0;
+      }
+
+
+      .booking-terms-content {
+        padding: 27px 20px;
+
+        border-radius: 22px;
+      }
+
+
+      .booking-terms-sidebar {
+        padding: 20px;
+      }
+
+
+      .booking-terms-sidebar a {
+        display: flex;
+
+        margin-right: 0;
+      }
+
+
+      .booking-term h3 {
+        font-size: 1.23rem;
+      }
+
+
+      .booking-term p,
+      .booking-term li {
+        font-size: 0.68rem;
+      }
+
+
+      .booking-checklist {
+        grid-template-columns: 1fr;
+      }
+
+
+      .booking-note {
+        padding: 18px;
+
+        gap: 12px;
+      }
+
+
+      .booking-cta {
+        padding: 27px 18px;
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body class="booking-terms-page">
+
+
+  <!-- =====================================================
+         PAGE LOADER
+    ====================================================== -->
+
+  <div class="page-loader">
+
+    <div class="loader-content">
+
+      <div class="loader-paw">
+
+        <i class="fa-solid fa-paw"></i>
+
+      </div>
+
+      <h2>
+        FURLUXE
+      </h2>
+
+      <p>
+        Luxury Grooming. Exceptional Care.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+  <header class="header">
+
+    <nav class="navbar">
+
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-mark">
+
+          <i class="fa-solid fa-paw"></i>
+
+        </span>
+
+        <span class="logo-text">
+          FURLUXE
+        </span>
+
+      </a>
+
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="services.html">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="grooming.html">
+            Grooming
+          </a>
+        </li>
+
+        <li>
+          <a href="packages.html">
+            Packages
+          </a>
+        </li>
+
+        <li>
+          <a href="team.html">
+            Our Groomers
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="reviews.html">
+            Reviews
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+
+        <li>
+          <a href="faq.html">
+            FAQ
+          </a>
+        </li>
+
+      </ul>
+
+
+      <a href="appointment.html" class="nav-book-btn">
+
+        Book Appointment
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+  <main>
+
+
+    <!-- =================================================
+             HERO
+        ================================================== -->
+
+    <section class="booking-terms-hero">
+
+      <div class="container">
+
+        <div class="booking-terms-hero-content reveal">
+
+          <div class="booking-terms-tag">
+            BEFORE YOU BOOK
+          </div>
+
+
+          <h1>
+            Booking
+            <span>Terms.</span>
+          </h1>
+
+
+          <p>
+            A simple guide to appointments, cancellations,
+            grooming preparation and the information we
+            need to give your pet a comfortable FURLUXE
+            experience.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+    <section class="booking-terms-section">
+
+      <div class="container">
+
+        <div class="booking-terms-layout">
+
+
+          <!-- =================================================
+                         SIDEBAR
+                    ================================================== -->
+
+          <aside class="booking-terms-sidebar">
+
+            <h3>
+              Booking Guide
+            </h3>
+
+
+            <a href="#confirmation">
+              Appointment Confirmation
+            </a>
+
+
+            <a href="#arrival">
+              Arrival & Timing
+            </a>
+
+
+            <a href="#cancellation">
+              Cancellation
+            </a>
+
+
+            <a href="#no-show">
+              Missed Appointments
+            </a>
+
+
+            <a href="#pet-information">
+              Pet Information
+            </a>
+
+
+            <a href="#health">
+              Health & Safety
+            </a>
+
+
+            <a href="#services">
+              Grooming Services
+            </a>
+
+
+            <a href="#pricing">
+              Pricing & Payment
+            </a>
+
+
+            <a href="#responsibility">
+              Customer Responsibility
+            </a>
+
+
+            <a href="#contact">
+              Questions
+            </a>
+
+          </aside>
+
+
+          <!-- =================================================
+                         ARTICLE
+                    ================================================== -->
+
+          <article class="booking-terms-content">
+
+
+            <!-- INTRO -->
+
+            <div class="booking-intro">
+
+              <div class="booking-updated">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                Last updated: October 2026
+
+              </div>
+
+
+              <h2>
+                A smoother booking,
+                <span>from start to finish.</span>
+              </h2>
+
+
+              <p>
+                Please review these booking guidelines
+                before requesting a FURLUXE grooming
+                appointment. They help us prepare for
+                your pet and provide a safe, comfortable
+                and organized experience.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                             01
+                        ================================================== -->
+
+            <section class="booking-term" id="confirmation">
+
+              <h3>
+
+                <span class="booking-number">
+                  01
+                </span>
+
+                Appointment Confirmation
+
+              </h3>
+
+
+              <p>
+                An appointment request submitted through
+                our website is a request for a preferred
+                date and time. It does not automatically
+                guarantee an appointment.
+              </p>
+
+
+              <p>
+                Your appointment should be considered
+                confirmed only after FURLUXE communicates
+                confirmation to you.
+              </p>
+
+
+              <div class="booking-note">
+
+                <div class="booking-note-icon">
+
+                  <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+
+                <p>
+                  Please keep your phone number and
+                  contact information accurate so our
+                  team can reach you regarding your
+                  booking.
+                </p>
+
+              </div>
+
+            </section>
+
+
+            <!-- =================================================
+                             02
+                        ================================================== -->
+
+            <section class="booking-term" id="arrival">
+
+              <h3>
+
+                <span class="booking-number">
+                  02
+                </span>
+
+                Arrival & Appointment Timing
+
+              </h3>
+
+
+              <p>
+                Please arrive at the agreed appointment
+                time. Arriving on time helps us maintain
+                the schedule and provide each pet with
+                appropriate attention.
+              </p>
+
+
+              <div class="booking-checklist">
+
+                <div class="booking-check">
+
+                  <i class="fa-solid fa-check"></i>
+
+                  <span>
+                    Arrive at the scheduled time.
+                  </span>
+
+                </div>
+
+
+                <div class="booking-check">
+
+                  <i class="fa-solid fa-check"></i>
+
+                  <span>
+                    Keep your pet safely secured
+                    while arriving.
+                  </span>
+
+                </div>
+
+
+                <div class="booking-check">
+
+                  <i class="fa-solid fa-check"></i>
+
+                  <span>
+                    Bring any requested information
+                    about your pet.
+                  </span>
+
+                </div>
+
+
+                <div class="booking-check">
+
+                  <i class="fa-solid fa-check"></i>
+
+                  <span>
+                    Inform us if you expect to be
+                    significantly late.
+                  </span>
+
+                </div>
+
+              </div>
+
+            </section>
+
+
+            <!-- =================================================
+                             03
+                        ================================================== -->
+
+            <section class="booking-term" id="cancellation">
+
+              <h3>
+
+                <span class="booking-number">
+                  03
+                </span>
+
+                Cancellation & Rescheduling
+
+              </h3>
+
+
+              <p>
+                If you need to cancel or change your
+                appointment, please contact FURLUXE
+                as early as possible.
+              </p>
+
+
+              <p>
+                Early communication gives our team the
+                opportunity to adjust the schedule and
+                make the appointment slot available
+                to another customer.
+              </p>
+
+
+              <p>
+                Any applicable cancellation or
+                rescheduling policy will be communicated
+                to you before a charge is applied.
+              </p>
+
+            </section>
+
+
+            <!-- =================================================
+                             04
+                        ================================================== -->
+
+            <section class="booking-term" id="no-show">
+
+              <h3>
+
+                <span class="booking-number">
+                  04
+                </span>
+
+                Missed Appointments
+
+              </h3>
+
+
+              <p>
+                If an appointment is missed without
+                prior communication, the appointment
+                slot may no longer be available.
+              </p>
+
+
+              <p>
+                Repeated missed appointments may affect
+                future booking availability or may
+                require additional confirmation before
+                another appointment is scheduled.
+              </p>
+
+            </section>
+
+
+            <!-- =================================================
+                             05
+                        ================================================== -->
+
+            <section class="booking-term" id="pet-information">
+
+              <h3>
+
+                <span class="booking-number">
+                  05
+                </span>
+
+                Pet Information
+
+              </h3>
+
+
+              <p>
+                Please provide accurate information
+                about your pet when making a booking.
+                This helps our grooming team understand
+                your pet's needs before the appointment.
+              </p>
+
+
+              <ul>
+
+                <li>
+                  Pet name and basic details.
+                </li>
+
+                <li>
+                  Breed or breed type, where known.
+                </li>
+
+                <li>
+                  Approximate size and coat condition.
+                </li>
+
+                <li>
+                  Requested grooming service.
+                </li>
+
+                <li>
+                  Relevant behavioural or handling
+                  information.
+                </li>
+
+              </ul>
+
+            </section>
+
+
+            <!-- =================================================
+                             06
+                        ================================================== -->
+
+            <section class="booking-term" id="health">
+
+              <h3>
+
+                <span class="booking-number">
+                  06
+                </span>
+
+                Health & Safety
+
+              </h3>
+
+
+              <p>
+                Please inform the grooming team about
+                any known allergies, skin sensitivities,
+                injuries, medical restrictions,
+                behavioural concerns or other conditions
+                that could affect grooming.
+              </p>
+
+
+              <p>
+                If a requested service appears unsuitable
+                for the pet's current condition, the
+                grooming team may recommend modifying,
+                postponing or declining the service.
+              </p>
+
+
+              <div class="booking-note">
+
+                <div class="booking-note-icon">
+
+                  <i class="fa-solid fa-heart"></i>
+
+                </div>
+
+
+                <p>
+                  Your pet's comfort and safety should
+                  always come first. Please share
+                  important information with our team
+                  before grooming begins.
+                </p>
+
+              </div>
+
+            </section>
+
+
+            <!-- =================================================
+                             07
+                        ================================================== -->
+
+            <section class="booking-term" id="services">
+
+              <h3>
+
+                <span class="booking-number">
+                  07
+                </span>
+
+                Grooming Services
+
+              </h3>
+
+
+              <p>
+                The final grooming service may depend
+                on your pet's coat, size, breed,
+                temperament, condition and individual
+                grooming requirements.
+              </p>
+
+
+              <p>
+                A requested style or result may not
+                always be possible if it would be
+                unsuitable or uncomfortable for the pet.
+              </p>
+
+
+              <p>
+                Any significant change to the requested
+                service should be discussed with the
+                customer before proceeding where
+                reasonably possible.
+              </p>
+
+            </section>
+
+
+            <!-- =================================================
+                             08
+                        ================================================== -->
+
+            <section class="booking-term" id="pricing">
+
+              <h3>
+
+                <span class="booking-number">
+                  08
+                </span>
+
+                Pricing & Payment
+
+              </h3>
+
+
+              <p>
+                Grooming prices may vary based on the
+                selected service, package and the
+                individual requirements of your pet.
+              </p>
+
+
+              <p>
+                Website pricing is subject to change.
+                The applicable price should be confirmed
+                during the booking or service process.
+              </p>
+
+
+              <p>
+                If additional grooming work is required,
+                the applicable additional cost should be
+                communicated before proceeding whenever
+                reasonably possible.
+              </p>
+
+            </section>
+
+
+            <!-- =================================================
+                             09
+                        ================================================== -->
+
+            <section class="booking-term" id="responsibility">
+
+              <h3>
+
+                <span class="booking-number">
+                  09
+                </span>
+
+                Customer Responsibility
+
+              </h3>
+
+
+              <p>
+                By requesting an appointment, customers
+                agree to provide accurate information
+                and follow reasonable instructions
+                relating to their pet's visit.
+              </p>
+
+
+              <p>
+                Customers should also ensure that their
+                pet can be safely transported to and from
+                the grooming location.
+              </p>
+
+
+              <p>
+                These booking terms do not remove or
+                limit any rights or protections that
+                cannot legally be excluded or limited
+                under applicable law.
+              </p>
+
+            </section>
+
+
+            <!-- =================================================
+                             10
+                        ================================================== -->
+
+            <section class="booking-term" id="contact">
+
+              <h3>
+
+                <span class="booking-number">
+                  10
+                </span>
+
+                Questions About Your Booking?
+
+              </h3>
+
+
+              <p>
+                If you have questions about an appointment,
+                grooming service, cancellation or any
+                booking requirement, please contact the
+                FURLUXE team before submitting your request.
+              </p>
+
+            </section>
+
+
+            <!-- =================================================
+                             CTA
+                        ================================================== -->
+
+            <div class="booking-cta">
+
+              <div class="booking-cta-icon">
+
+                <i class="fa-solid fa-paw"></i>
+
+              </div>
+
+
+              <h3>
+                Ready to book?
+              </h3>
+
+
+              <p>
+                Now that you know how our booking process
+                works, you can request a grooming
+                appointment for your pet.
+              </p>
+
+
+              <div class="booking-cta-buttons">
+
+
+                <a href="appointment.html" class="booking-cta-primary">
+
+                  <i class="fa-regular fa-calendar-check"></i>
+
+                  Book Appointment
+
+                </a>
+
+
+                <a href="contact.html" class="booking-cta-secondary">
+
+                  <i class="fa-solid fa-envelope"></i>
+
+                  Contact Us
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo footer-logo">
+
+            <span class="logo-mark">
+
+              <i class="fa-solid fa-paw"></i>
+
+            </span>
+
+            <span class="logo-text">
+              FURLUXE
+            </span>
+
+          </a>
+
+
+          <p>
+            Luxury grooming with a softer touch.
+            Thoughtful care for the pets who make
+            life a little better.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+
+              <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="Facebook">
+
+              <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="YouTube">
+
+              <i class="fa-brands fa-youtube"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="WhatsApp">
+
+              <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="grooming.html">
+            Grooming
+          </a>
+
+          <a href="packages.html">
+            Packages
+          </a>
+
+        </div>
+
+
+        <!-- FURLUXE -->
+
+        <div class="footer-column">
+
+          <h4>
+            FURLUXE
+          </h4>
+
+          <a href="team.html">
+            Our Groomers
+          </a>
+
+          <a href="about.html">
+            Our Story
+          </a>
+
+          <a href="reviews.html">
+            Reviews
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+        </div>
+
+
+        <!-- SUPPORT -->
+
+        <div class="footer-column">
+
+          <h4>
+            Support
+          </h4>
+
+          <a href="faq.html">
+            FAQ
+          </a>
+
+          <a href="help.html">
+            Help Center
+          </a>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="footer-bottom">
+
+        <p>
+          ©
+          <span id="currentYear"></span>
+          FURLUXE.
+          All rights reserved.
+        </p>
+
+
+        <p>
+          Luxury Grooming. Exceptional Care.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+  <a href="https://wa.me/919999999999?text=Hello%20FURLUXE%2C%20I%20have%20a%20question%20about%20booking."
+    class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with FURLUXE on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>
+      Chat with us
+    </span>
+
+  </a>
+
+
+  <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+  <button class="back-to-top" type="button" aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- =====================================================
+         CURRENT YEAR
+    ====================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+        const year =
+          document.getElementById(
+            "currentYear"
+          );
+
+        if (year) {
+
+          year.textContent =
+            new Date().getFullYear();
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+  <!-- =====================================================
+         MAIN SCRIPT
+    ====================================================== -->
+
+  <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

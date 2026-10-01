@@ -1,0 +1,2853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Explore FURLUXE premium pet grooming services including full grooming, bathing, nail care, de-shedding, spa treatments and more.">
+
+  <meta name="theme-color" content="#18352f">
+
+  <title>Services | FURLUXE — Luxury Grooming. Exceptional Care.</title>
+
+
+  <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+    rel="stylesheet">
+
+
+  <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <!-- =====================================================
+         SERVICES PAGE CSS
+    ====================================================== -->
+
+  <style>
+    /* =================================================
+           SERVICES PAGE ONLY
+        ================================================= */
+
+    .services-hero {
+      position: relative;
+
+      min-height: 72vh;
+
+      padding: 170px 0 100px;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      background: var(--forest);
+    }
+
+
+    .services-hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 650px;
+      height: 650px;
+
+      right: -230px;
+      top: -250px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(198, 162, 106, 0.2);
+
+      box-shadow:
+        0 0 0 80px rgba(198, 162, 106, 0.035),
+        0 0 0 160px rgba(198, 162, 106, 0.025);
+    }
+
+
+    .services-hero::after {
+      content: "✦";
+
+      position: absolute;
+
+      right: 17%;
+      bottom: 18%;
+
+      color:
+        rgba(198, 162, 106, 0.3);
+
+      font-size: 2rem;
+
+      animation:
+        servicesFloat 4s ease-in-out infinite;
+    }
+
+
+    .services-hero-grid {
+      position: relative;
+      z-index: 2;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 0.85fr;
+
+      align-items: center;
+
+      gap: 80px;
+    }
+
+
+    .services-hero-content {
+      max-width: 700px;
+    }
+
+
+    .services-hero-content .section-tag {
+      color: var(--gold-light);
+    }
+
+
+    .services-hero-content h1 {
+      margin-top: 20px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(3.5rem, 7vw, 6.8rem);
+
+      font-weight: 600;
+
+      line-height: 0.95;
+
+      letter-spacing: -0.04em;
+    }
+
+
+    .services-hero-content h1 span {
+      display: block;
+
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .services-hero-content>p {
+      max-width: 580px;
+
+      margin-top: 30px;
+
+      color:
+        rgba(255, 255, 255, 0.68);
+
+      font-size: 1rem;
+
+      line-height: 1.9;
+    }
+
+
+    .services-hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 14px;
+
+      margin-top: 35px;
+    }
+
+
+    .services-hero-image {
+      height: 570px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius:
+        220px 220px 25px 25px;
+
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .services-hero-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 1s ease;
+    }
+
+
+    .services-hero-image:hover img {
+      transform: scale(1.04);
+    }
+
+
+    .hero-service-badge {
+      position: absolute;
+
+      left: -20px;
+      bottom: 35px;
+
+      padding: 18px 22px;
+
+      border-radius: 17px;
+
+      background:
+        rgba(255, 255, 255, 0.94);
+
+      backdrop-filter: blur(15px);
+
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.18);
+    }
+
+
+    .hero-service-badge span {
+      display: block;
+
+      color: var(--gold);
+
+      font-size: 0.62rem;
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+    }
+
+
+    .hero-service-badge strong {
+      display: block;
+
+      margin-top: 4px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.15rem;
+    }
+
+
+    /* =================================================
+           CATEGORY FILTER
+        ================================================= */
+
+    .service-filter-section {
+      padding: 45px 0;
+
+      background: var(--white);
+
+      border-bottom:
+        1px solid var(--border);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 50;
+    }
+
+
+    .service-filters {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+    }
+
+
+    .filter-btn {
+      padding: 11px 19px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 100px;
+
+      background: transparent;
+
+      color: var(--muted);
+
+      font-size: 0.75rem;
+      font-weight: 600;
+
+      transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border var(--transition-fast),
+        transform var(--transition-fast);
+    }
+
+
+    .filter-btn:hover {
+      transform: translateY(-2px);
+
+      border-color: var(--forest);
+
+      color: var(--forest);
+    }
+
+
+    .filter-btn.active {
+      background: var(--forest);
+
+      border-color: var(--forest);
+
+      color: var(--white);
+    }
+
+
+    /* =================================================
+           SERVICE CATALOGUE
+        ================================================= */
+
+    .service-catalogue {
+      background: var(--ivory);
+    }
+
+
+    .catalogue-intro {
+      max-width: 750px;
+
+      margin: 0 auto 65px;
+
+      text-align: center;
+    }
+
+
+    .catalogue-intro h2 {
+      margin-top: 15px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.6rem, 5vw, 4.5rem);
+
+      line-height: 1.05;
+    }
+
+
+    .catalogue-intro h2 span {
+      color: var(--gold);
+
+      font-style: italic;
+    }
+
+
+    .catalogue-intro p {
+      margin-top: 20px;
+
+      color: var(--muted);
+
+      line-height: 1.8;
+    }
+
+
+    .services-catalogue-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 25px;
+    }
+
+
+    .premium-service-card {
+      display: grid;
+
+      grid-template-columns:
+        0.8fr 1fr;
+
+      min-height: 380px;
+
+      overflow: hidden;
+
+      background: var(--white);
+
+      border-radius: 25px;
+
+      box-shadow:
+        0 10px 40px rgba(30, 35, 30, 0.05);
+
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+    }
+
+
+    .premium-service-card:hover {
+      transform: translateY(-7px);
+
+      box-shadow:
+        0 25px 65px rgba(30, 35, 30, 0.11);
+    }
+
+
+    .premium-service-image {
+      position: relative;
+
+      min-height: 380px;
+
+      overflow: hidden;
+    }
+
+
+    .premium-service-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.8s ease;
+    }
+
+
+    .premium-service-card:hover .premium-service-image img {
+      transform: scale(1.06);
+    }
+
+
+    .service-index {
+      position: absolute;
+
+      top: 18px;
+      left: 18px;
+
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255, 255, 255, 0.92);
+
+      color: var(--forest);
+
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+
+
+    .premium-service-content {
+      padding: 35px 30px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+    }
+
+
+    .service-small-tag {
+      color: var(--gold);
+
+      font-size: 0.62rem;
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+    }
+
+
+    .premium-service-content h3 {
+      margin-top: 12px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.8rem;
+
+      line-height: 1.1;
+    }
+
+
+    .premium-service-content>p {
+      margin-top: 13px;
+
+      color: var(--muted);
+
+      font-size: 0.8rem;
+
+      line-height: 1.75;
+    }
+
+
+    .service-details {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-top: 20px;
+    }
+
+
+    .service-detail {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 6px;
+
+      padding: 7px 10px;
+
+      border-radius: 100px;
+
+      background: var(--beige-light);
+
+      color: var(--forest);
+
+      font-size: 0.63rem;
+      font-weight: 600;
+    }
+
+
+    .service-detail i {
+      color: var(--gold);
+    }
+
+
+    .service-includes {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 7px;
+
+      margin-top: 20px;
+    }
+
+
+    .service-includes li {
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color: var(--text);
+
+      font-size: 0.69rem;
+    }
+
+
+    .service-includes li i {
+      color: var(--gold);
+
+      font-size: 0.6rem;
+    }
+
+
+    .service-book {
+      align-self: flex-start;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      margin-top: 22px;
+
+      color: var(--forest);
+
+      font-size: 0.72rem;
+      font-weight: 700;
+
+      border-bottom:
+        1px solid var(--gold);
+
+      padding-bottom: 5px;
+
+      transition:
+        color var(--transition-fast),
+        gap var(--transition-fast);
+    }
+
+
+    .service-book:hover {
+      color: var(--gold);
+
+      gap: 13px;
+    }
+
+
+    /* =================================================
+           FEATURED SERVICE
+        ================================================= */
+
+    .featured-service {
+      grid-column: 1 / -1;
+
+      display: grid;
+
+      grid-template-columns:
+        1.15fr 1fr;
+
+      min-height: 480px;
+
+      overflow: hidden;
+
+      background: var(--forest);
+
+      border-radius: 30px;
+
+      box-shadow:
+        0 20px 60px rgba(24, 53, 47, 0.15);
+    }
+
+
+    .featured-service-image {
+      position: relative;
+
+      min-height: 480px;
+
+      overflow: hidden;
+    }
+
+
+    .featured-service-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 1s ease;
+    }
+
+
+    .featured-service:hover .featured-service-image img {
+      transform: scale(1.04);
+    }
+
+
+    .featured-service-content {
+      padding: 55px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+    }
+
+
+    .featured-label {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color: var(--gold-light);
+
+      font-size: 0.65rem;
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+    }
+
+
+    .featured-label i {
+      font-size: 0.55rem;
+    }
+
+
+    .featured-service-content h3 {
+      margin-top: 18px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.2rem, 4vw, 3.8rem);
+
+      line-height: 1;
+    }
+
+
+    .featured-service-content h3 span {
+      display: block;
+
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .featured-service-content>p {
+      max-width: 470px;
+
+      margin-top: 22px;
+
+      color:
+        rgba(255, 255, 255, 0.64);
+
+      line-height: 1.8;
+
+      font-size: 0.85rem;
+    }
+
+
+    .featured-list {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 10px;
+
+      margin-top: 25px;
+    }
+
+
+    .featured-list li {
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color:
+        rgba(255, 255, 255, 0.82);
+
+      font-size: 0.7rem;
+    }
+
+
+    .featured-list i {
+      color: var(--gold-light);
+
+      font-size: 0.58rem;
+    }
+
+
+    /* =================================================
+           PROCESS
+        ================================================= */
+
+    .grooming-process {
+      background: var(--white);
+    }
+
+
+    .process-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .process-card {
+      position: relative;
+
+      padding: 30px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 20px;
+
+      background: var(--ivory);
+
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+    }
+
+
+    .process-card:hover {
+      transform: translateY(-6px);
+
+      box-shadow:
+        var(--shadow-soft);
+    }
+
+
+    .process-number {
+      color: var(--gold);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 2.2rem;
+    }
+
+
+    .process-card h3 {
+      margin-top: 20px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.3rem;
+    }
+
+
+    .process-card p {
+      margin-top: 9px;
+
+      color: var(--muted);
+
+      font-size: 0.75rem;
+
+      line-height: 1.7;
+    }
+
+
+    /* =================================================
+           CARE PROMISE
+        ================================================= */
+
+    .care-promise {
+      background: var(--ivory);
+    }
+
+
+    .promise-grid {
+      display: grid;
+
+      grid-template-columns:
+        0.8fr 1.2fr;
+
+      gap: 90px;
+
+      align-items: center;
+    }
+
+
+    .promise-image {
+      height: 600px;
+
+      overflow: hidden;
+
+      border-radius:
+        30px 140px 30px 30px;
+    }
+
+
+    .promise-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 1s ease;
+    }
+
+
+    .promise-image:hover img {
+      transform: scale(1.04);
+    }
+
+
+    .promise-content h2 {
+      margin-top: 18px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.7rem, 5vw, 4.5rem);
+
+      line-height: 1;
+    }
+
+
+    .promise-content h2 span {
+      display: block;
+
+      color: var(--gold);
+
+      font-style: italic;
+    }
+
+
+    .promise-content>p {
+      max-width: 560px;
+
+      margin-top: 25px;
+
+      color: var(--muted);
+
+      line-height: 1.85;
+    }
+
+
+    .promise-points {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 25px;
+
+      margin-top: 35px;
+    }
+
+
+    .promise-point {
+      display: flex;
+
+      gap: 13px;
+    }
+
+
+    .promise-point-icon {
+      width: 40px;
+      height: 40px;
+
+      flex-shrink: 0;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--white);
+
+      color: var(--gold);
+
+      font-size: 0.8rem;
+    }
+
+
+    .promise-point h4 {
+      color: var(--forest);
+
+      font-size: 0.8rem;
+    }
+
+
+    .promise-point p {
+      margin-top: 3px;
+
+      color: var(--muted);
+
+      font-size: 0.68rem;
+
+      line-height: 1.6;
+    }
+
+
+    /* =================================================
+           CTA
+        ================================================= */
+
+    .services-page-cta {
+      padding: 120px 0;
+
+      background: var(--forest);
+
+      text-align: center;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+
+    .services-page-cta::before {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      left: -250px;
+      top: -250px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.2);
+    }
+
+
+    .services-page-cta-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 760px;
+
+      margin: auto;
+    }
+
+
+    .services-page-cta h2 {
+      margin-top: 18px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.8rem, 6vw, 5rem);
+
+      line-height: 1;
+    }
+
+
+    .services-page-cta h2 span {
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .services-page-cta p {
+      max-width: 550px;
+
+      margin: 22px auto 0;
+
+      color:
+        rgba(255, 255, 255, 0.64);
+
+      line-height: 1.8;
+    }
+
+
+    .services-page-cta .btn {
+      margin-top: 32px;
+    }
+
+
+    /* =================================================
+           ANIMATION
+        ================================================= */
+
+    @keyframes servicesFloat {
+
+      0%,
+      100% {
+        transform:
+          translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform:
+          translateY(-12px) rotate(8deg);
+      }
+
+    }
+
+
+    /* =================================================
+           FILTER ANIMATION
+        ================================================= */
+
+    .premium-service-card.hidden {
+      display: none;
+    }
+
+
+    /* =================================================
+           RESPONSIVE
+        ================================================= */
+
+    @media (max-width: 1050px) {
+
+      .services-hero-grid {
+        gap: 45px;
+      }
+
+      .services-catalogue-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-service {
+        grid-column: auto;
+      }
+
+      .process-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .promise-grid {
+        gap: 50px;
+      }
+
+    }
+
+
+    @media (max-width: 900px) {
+
+      .services-hero {
+        padding-top: 140px;
+      }
+
+      .services-hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-hero-content {
+        max-width: 750px;
+      }
+
+      .services-hero-image {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: auto;
+      }
+
+      .featured-service {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-service-image {
+        min-height: 400px;
+      }
+
+      .promise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .promise-image {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: auto;
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .services-hero {
+        min-height: auto;
+
+        padding:
+          120px 0 70px;
+      }
+
+      .services-hero-content h1 {
+        font-size: 3.5rem;
+      }
+
+      .services-hero-buttons {
+        flex-direction: column;
+      }
+
+      .services-hero-buttons .btn {
+        width: 100%;
+      }
+
+      .services-hero-image {
+        height: 500px;
+      }
+
+      .hero-service-badge {
+        left: 10px;
+      }
+
+      .service-filter-section {
+        position: static;
+
+        padding: 25px 0;
+      }
+
+      .service-filters {
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 5px;
+      }
+
+      .filter-btn {
+        flex-shrink: 0;
+      }
+
+      .premium-service-card {
+        grid-template-columns: 1fr;
+      }
+
+      .premium-service-image {
+        min-height: 280px;
+      }
+
+      .premium-service-content {
+        padding: 30px 25px;
+      }
+
+      .featured-service-content {
+        padding: 35px 25px;
+      }
+
+      .featured-list {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .promise-points {
+        grid-template-columns: 1fr;
+      }
+
+      .promise-image {
+        height: 500px;
+      }
+
+      .services-page-cta {
+        padding: 90px 0;
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+         PAGE LOADER
+    ====================================================== -->
+
+  <div class="page-loader">
+
+    <div class="loader-content">
+
+      <div class="loader-paw">
+        <i class="fa-solid fa-paw"></i>
+      </div>
+
+      <h2>FURLUXE</h2>
+
+      <p>
+        Luxury Grooming. Exceptional Care.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+  <header class="header">
+
+    <nav class="navbar">
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-mark">
+          <i class="fa-solid fa-paw"></i>
+        </span>
+
+        <span class="logo-text">
+          FURLUXE
+        </span>
+
+      </a>
+
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="index.html" class="active">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="services.html">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="grooming.html">
+            Grooming
+          </a>
+        </li>
+
+        <li>
+          <a href="packages.html">
+            Packages
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+
+      <a href="appointment.html" class="nav-book-btn">
+        Book Appointment
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+
+      <button class="menu-toggle" aria-label="Open navigation menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =================================================
+             HERO
+        ================================================== -->
+
+    <section class="services-hero">
+
+      <div class="container">
+
+        <div class="services-hero-grid">
+
+
+          <div class="services-hero-content reveal">
+
+            <div class="section-tag">
+              FURLUXE SERVICES
+            </div>
+
+            <h1>
+              Care that makes
+              <span>tails wag.</span>
+            </h1>
+
+            <p>
+              From a refreshing bath to a complete
+              grooming transformation, every FURLUXE
+              service is designed around comfort,
+              cleanliness and the unique needs of
+              your pet.
+            </p>
+
+
+            <div class="services-hero-buttons">
+
+              <a href="appointment.html" class="btn btn-light">
+                Book a Grooming
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="#services" class="btn" style="
+                                    border:1px solid
+                                    rgba(255,255,255,0.3);
+                                    color:#fff;
+                                ">
+                Explore Services
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="services-hero-image reveal">
+
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1000&q=85"
+              alt="Happy dog receiving professional care">
+
+
+            <div class="hero-service-badge">
+
+              <span>
+                Premium Pet Care
+              </span>
+
+              <strong>
+                Gentle. Clean. Personal.
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             SERVICE FILTER
+        ================================================== -->
+
+    <section class="service-filter-section">
+
+      <div class="container">
+
+        <div class="service-filters">
+
+          <button class="filter-btn active" data-filter="all">
+            All Services
+          </button>
+
+          <button class="filter-btn" data-filter="grooming">
+            Grooming
+          </button>
+
+          <button class="filter-btn" data-filter="bath">
+            Bath & Spa
+          </button>
+
+          <button class="filter-btn" data-filter="care">
+            Paw & Care
+          </button>
+
+          <button class="filter-btn" data-filter="coat">
+            Coat Care
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             SERVICES
+        ================================================== -->
+
+    <section class="section service-catalogue" id="services">
+
+      <div class="container">
+
+
+        <div class="catalogue-intro reveal">
+
+          <div class="section-tag">
+            OUR SERVICES
+          </div>
+
+          <h2>
+            Everything your pet needs,
+            <span>under one roof.</span>
+          </h2>
+
+          <p>
+            Choose a single service or create a
+            complete grooming experience. Our team
+            keeps every visit calm, comfortable and
+            tailored to your pet.
+          </p>
+
+        </div>
+
+
+        <div class="services-catalogue-grid">
+
+
+          <!-- =====================================
+                         SERVICE 01
+                    ====================================== -->
+
+          <article class="premium-service-card reveal" data-category="grooming">
+
+            <div class="premium-service-image">
+
+              <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=900&q=85"
+                alt="Professional full pet grooming" loading="lazy">
+
+              <span class="service-index">
+                01
+              </span>
+
+            </div>
+
+
+            <div class="premium-service-content">
+
+              <span class="service-small-tag">
+                Signature Service
+              </span>
+
+              <h3>
+                Full Grooming
+              </h3>
+
+              <p>
+                A complete grooming session
+                designed to leave your pet
+                fresh, comfortable and looking
+                their best.
+              </p>
+
+
+              <div class="service-details">
+
+                <span class="service-detail">
+                  <i class="fa-regular fa-clock"></i>
+                  90–120 min
+                </span>
+
+                <span class="service-detail">
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  From ₹999
+                </span>
+
+              </div>
+
+
+              <ul class="service-includes">
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Bath & conditioning
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Hair trimming
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Nail & paw care
+                </li>
+
+              </ul>
+
+
+              <a href="appointment.html?service=full-grooming" class="service-book">
+                Book this service
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         SERVICE 02
+                    ====================================== -->
+
+          <article class="premium-service-card reveal" data-category="bath">
+
+            <div class="premium-service-image">
+
+              <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=900&q=85"
+                alt="Pet bath and spa service" loading="lazy">
+
+              <span class="service-index">
+                02
+              </span>
+
+            </div>
+
+
+            <div class="premium-service-content">
+
+              <span class="service-small-tag">
+                Fresh & Clean
+              </span>
+
+              <h3>
+                Bath & Spa
+              </h3>
+
+              <p>
+                A relaxing bath experience using
+                gentle products selected for your
+                pet's coat and skin.
+              </p>
+
+
+              <div class="service-details">
+
+                <span class="service-detail">
+                  <i class="fa-regular fa-clock"></i>
+                  45–60 min
+                </span>
+
+                <span class="service-detail">
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  From ₹599
+                </span>
+
+              </div>
+
+
+              <ul class="service-includes">
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Premium shampoo
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Conditioning
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Blow dry & brushing
+                </li>
+
+              </ul>
+
+
+              <a href="appointment.html?service=bath-spa" class="service-book">
+                Book this service
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         SERVICE 03
+                    ====================================== -->
+
+          <article class="premium-service-card reveal" data-category="care">
+
+            <div class="premium-service-image">
+
+              <img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?auto=format&fit=crop&w=900&q=85"
+                alt="Pet nail and paw care" loading="lazy">
+
+              <span class="service-index">
+                03
+              </span>
+
+            </div>
+
+
+            <div class="premium-service-content">
+
+              <span class="service-small-tag">
+                Gentle Care
+              </span>
+
+              <h3>
+                Nail & Paw Care
+              </h3>
+
+              <p>
+                Gentle nail trimming and paw care
+                to keep every little step safe,
+                clean and comfortable.
+              </p>
+
+
+              <div class="service-details">
+
+                <span class="service-detail">
+                  <i class="fa-regular fa-clock"></i>
+                  20–30 min
+                </span>
+
+                <span class="service-detail">
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  From ₹299
+                </span>
+
+              </div>
+
+
+              <ul class="service-includes">
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Nail trimming
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Paw cleaning
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Paw balm
+                </li>
+
+              </ul>
+
+
+              <a href="appointment.html?service=nail-paw-care" class="service-book">
+                Book this service
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         SERVICE 04
+                    ====================================== -->
+
+          <article class="premium-service-card reveal" data-category="coat">
+
+            <div class="premium-service-image">
+
+              <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=85"
+                alt="Pet de-shedding and coat care" loading="lazy">
+
+              <span class="service-index">
+                04
+              </span>
+
+            </div>
+
+
+            <div class="premium-service-content">
+
+              <span class="service-small-tag">
+                Coat Care
+              </span>
+
+              <h3>
+                De-Shedding
+              </h3>
+
+              <p>
+                Help remove loose fur and keep
+                your pet's coat cleaner, fresher
+                and easier to maintain.
+              </p>
+
+
+              <div class="service-details">
+
+                <span class="service-detail">
+                  <i class="fa-regular fa-clock"></i>
+                  45–75 min
+                </span>
+
+                <span class="service-detail">
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  From ₹699
+                </span>
+
+              </div>
+
+
+              <ul class="service-includes">
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Coat assessment
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Loose fur removal
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Deep brushing
+                </li>
+
+              </ul>
+
+
+              <a href="appointment.html?service=de-shedding" class="service-book">
+                Book this service
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         FEATURED SERVICE 05
+                    ====================================== -->
+
+          <article class="featured-service reveal" data-category="grooming">
+
+            <div class="featured-service-image">
+
+              <img src="https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=1100&q=85"
+                alt="Luxury pet grooming experience" loading="lazy">
+
+            </div>
+
+
+            <div class="featured-service-content">
+
+              <span class="featured-label">
+
+                <i class="fa-solid fa-star"></i>
+
+                FURLUXE SIGNATURE
+
+              </span>
+
+
+              <h3>
+                The Furluxe
+                <span>Signature Spa</span>
+              </h3>
+
+
+              <p>
+                Our complete luxury grooming
+                experience for pet parents who
+                want a little more care, comfort
+                and attention for their companion.
+              </p>
+
+
+              <ul class="featured-list">
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Premium bath
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Full grooming
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  De-shedding
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Nail & paw care
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Coat conditioning
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Finishing brush
+                </li>
+
+              </ul>
+
+
+              <a href="appointment.html?service=signature-spa" class="btn btn-light" style="
+                                    align-self:flex-start;
+                                    margin-top:30px;
+                                ">
+                Book Signature Spa
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         SERVICE 06
+                    ====================================== -->
+
+          <article class="premium-service-card reveal" data-category="grooming">
+
+            <div class="premium-service-image">
+
+              <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=85"
+                alt="Pet haircut and styling" loading="lazy">
+
+              <span class="service-index">
+                06
+              </span>
+
+            </div>
+
+
+            <div class="premium-service-content">
+
+              <span class="service-small-tag">
+                Style & Shape
+              </span>
+
+              <h3>
+                Haircut & Styling
+              </h3>
+
+              <p>
+                Breed-aware trimming and styling
+                to keep your pet comfortable while
+                giving their coat a neat finish.
+              </p>
+
+
+              <div class="service-details">
+
+                <span class="service-detail">
+                  <i class="fa-regular fa-clock"></i>
+                  60–90 min
+                </span>
+
+                <span class="service-detail">
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  From ₹799
+                </span>
+
+              </div>
+
+
+              <ul class="service-includes">
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Coat preparation
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Professional trimming
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Finishing brush
+                </li>
+
+              </ul>
+
+
+              <a href="appointment.html?service=haircut-styling" class="service-book">
+                Book this service
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         SERVICE 07
+                    ====================================== -->
+
+          <article class="premium-service-card reveal" data-category="bath">
+
+            <div class="premium-service-image">
+
+              <img src="https://images.unsplash.com/photo-1568572933382-74d440642117?auto=format&fit=crop&w=900&q=85"
+                alt="Pet coat conditioning treatment" loading="lazy">
+
+              <span class="service-index">
+                07
+              </span>
+
+            </div>
+
+
+            <div class="premium-service-content">
+
+              <span class="service-small-tag">
+                Coat Wellness
+              </span>
+
+              <h3>
+                Coat Conditioning
+              </h3>
+
+              <p>
+                A nourishing conditioning treatment
+                that helps leave the coat softer,
+                smoother and easier to manage.
+              </p>
+
+
+              <div class="service-details">
+
+                <span class="service-detail">
+                  <i class="fa-regular fa-clock"></i>
+                  30–45 min
+                </span>
+
+                <span class="service-detail">
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  From ₹449
+                </span>
+
+              </div>
+
+
+              <ul class="service-includes">
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Coat consultation
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Conditioning treatment
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Gentle brush-out
+                </li>
+
+              </ul>
+
+
+              <a href="appointment.html?service=conditioning" class="service-book">
+                Book this service
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+                         SERVICE 08
+                    ====================================== -->
+
+          <article class="premium-service-card reveal" data-category="care">
+
+            <div class="premium-service-image">
+
+              <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=900&q=85"
+                alt="Gentle puppy grooming" loading="lazy">
+
+              <span class="service-index">
+                08
+              </span>
+
+            </div>
+
+
+            <div class="premium-service-content">
+
+              <span class="service-small-tag">
+                First Visit
+              </span>
+
+              <h3>
+                Puppy Grooming
+              </h3>
+
+              <p>
+                A gentle introduction to grooming
+                designed to help young pets feel
+                safe and comfortable.
+              </p>
+
+
+              <div class="service-details">
+
+                <span class="service-detail">
+                  <i class="fa-regular fa-clock"></i>
+                  30–45 min
+                </span>
+
+                <span class="service-detail">
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  From ₹499
+                </span>
+
+              </div>
+
+
+              <ul class="service-includes">
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Gentle bath
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Face & paw clean
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Puppy-safe brushing
+                </li>
+
+              </ul>
+
+
+              <a href="appointment.html?service=puppy-grooming" class="service-book">
+                Book this service
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             GROOMING PROCESS
+        ================================================== -->
+
+    <section class="section grooming-process">
+
+      <div class="container">
+
+
+        <div class="section-heading centered reveal">
+
+          <div class="section-tag">
+            OUR PROCESS
+          </div>
+
+          <h2>
+            Simple care.
+            <span>Beautiful results.</span>
+          </h2>
+
+          <p>
+            We keep the grooming experience
+            straightforward from check-in to
+            those happy tail wags on the way home.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+          <div class="process-card reveal">
+
+            <div class="process-number">
+              01
+            </div>
+
+            <h3>
+              Check-In
+            </h3>
+
+            <p>
+              We understand your pet's needs,
+              preferences and grooming requirements
+              before the session begins.
+            </p>
+
+          </div>
+
+
+          <div class="process-card reveal">
+
+            <div class="process-number">
+              02
+            </div>
+
+            <h3>
+              Gentle Prep
+            </h3>
+
+            <p>
+              Your pet is prepared with gentle
+              brushing and a comfortable grooming
+              setup.
+            </p>
+
+          </div>
+
+
+          <div class="process-card reveal">
+
+            <div class="process-number">
+              03
+            </div>
+
+            <h3>
+              Grooming
+            </h3>
+
+            <p>
+              Our selected service is performed
+              with patience, care and attention
+              to detail.
+            </p>
+
+          </div>
+
+
+          <div class="process-card reveal">
+
+            <div class="process-number">
+              04
+            </div>
+
+            <h3>
+              Happy Finish
+            </h3>
+
+            <p>
+              A final brush, finishing check and
+              a little extra love before your pet
+              heads home.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             CARE PROMISE
+        ================================================== -->
+
+    <section class="section care-promise">
+
+      <div class="container">
+
+        <div class="promise-grid">
+
+
+          <div class="promise-image reveal">
+
+            <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=1000&q=85"
+              alt="Happy dog after grooming" loading="lazy">
+
+          </div>
+
+
+          <div class="promise-content reveal">
+
+            <div class="section-tag">
+              THE FURLUXE PROMISE
+            </div>
+
+            <h2>
+              More than grooming.
+              <span>It's care.</span>
+            </h2>
+
+            <p>
+              Every pet has their own personality,
+              coat and comfort level. That's why
+              we don't believe in one-size-fits-all
+              grooming. We take the time to understand
+              every pet and create a calm experience
+              around them.
+            </p>
+
+
+            <div class="promise-points">
+
+
+              <div class="promise-point">
+
+                <div class="promise-point-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div>
+
+                  <h4>
+                    Gentle Handling
+                  </h4>
+
+                  <p>
+                    Patient care throughout
+                    every visit.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="promise-point">
+
+                <div class="promise-point-icon">
+                  <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <div>
+
+                  <h4>
+                    Quality Products
+                  </h4>
+
+                  <p>
+                    Carefully selected
+                    grooming products.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="promise-point">
+
+                <div class="promise-point-icon">
+                  <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+                <div>
+
+                  <h4>
+                    Clean Environment
+                  </h4>
+
+                  <p>
+                    A fresh and hygienic
+                    grooming space.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="promise-point">
+
+                <div class="promise-point-icon">
+                  <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <div>
+
+                  <h4>
+                    Personal Attention
+                  </h4>
+
+                  <p>
+                    Care tailored to
+                    your pet.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+
+            <a href="appointment.html" class="btn btn-dark">
+              Schedule a Visit
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             CTA
+        ================================================== -->
+
+    <section class="services-page-cta">
+
+      <div class="container">
+
+        <div class="services-page-cta-content reveal">
+
+          <div class="section-tag">
+            READY WHEN THEY ARE
+          </div>
+
+          <h2>
+            Give them a little
+            <span>FURLUXE time.</span>
+          </h2>
+
+          <p>
+            Choose a service, pick a convenient
+            appointment time and let us take care
+            of the rest.
+          </p>
+
+
+          <a href="appointment.html" class="btn btn-light">
+            Book an Appointment
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo footer-logo">
+
+            <span class="logo-mark">
+              <i class="fa-solid fa-paw"></i>
+            </span>
+
+            <span class="logo-text">
+              FURLUXE
+            </span>
+
+          </a>
+
+
+          <p>
+            Luxury grooming with a softer touch.
+            Thoughtful care for the pets who make
+            life a little better.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="index.html#packages">
+            Packages
+          </a>
+
+          <a href="index.html#about">
+            About Us
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Services
+          </h4>
+
+          <a href="#services">
+            Full Grooming
+          </a>
+
+          <a href="#services">
+            Bath & Spa
+          </a>
+
+          <a href="#services">
+            Nail & Paw Care
+          </a>
+
+          <a href="#services">
+            De-Shedding
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Visit
+          </h4>
+
+          <a href="appointment.html">
+            Book Appointment
+          </a>
+
+          <a href="contact.html">
+            Contact Us
+          </a>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          © <span id="currentYear"></span>
+          FURLUXE. All rights reserved.
+        </p>
+
+        <p>
+          Luxury Grooming. Exceptional Care.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+  <a href="https://wa.me/919999999999?text=Hello%20FURLUXE%2C%20I%20would%20like%20to%20book%20a%20pet%20grooming%20appointment."
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with FURLUXE on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>
+      Chat with us
+    </span>
+
+  </a>
+
+
+  <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+  <button class="back-to-top" aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+  <script src="js/script.js"></script>
+
+
+  <!-- =====================================================
+         SERVICES PAGE FILTER SCRIPT
+    ====================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+        const filterButtons =
+          document.querySelectorAll(
+            ".filter-btn"
+          );
+
+        const serviceCards =
+          document.querySelectorAll(
+            ".premium-service-card, .featured-service"
+          );
+
+
+        filterButtons.forEach(button => {
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              const filter =
+                button.dataset.filter;
+
+
+              filterButtons.forEach(
+                item => {
+                  item.classList.remove(
+                    "active"
+                  );
+                }
+              );
+
+
+              button.classList.add(
+                "active"
+              );
+
+
+              serviceCards.forEach(card => {
+
+                const category =
+                  card.dataset.category;
+
+
+                if (
+                  filter === "all" ||
+                  category === filter
+                ) {
+
+                  card.classList.remove(
+                    "hidden"
+                  );
+
+                  requestAnimationFrame(
+                    () => {
+
+                      card.style.opacity =
+                        "1";
+
+                      card.style.transform =
+                        "";
+
+                    }
+                  );
+
+                } else {
+
+                  card.classList.add(
+                    "hidden"
+                  );
+
+                }
+
+              });
+
+            }
+          );
+
+        });
+
+
+        /* =================================================
+           URL SERVICE SELECTION
+        ================================================= */
+
+        const params =
+          new URLSearchParams(
+            window.location.search
+          );
+
+        const selectedService =
+          params.get("service");
+
+
+        if (selectedService) {
+
+          const serviceMap = {
+
+            "full-grooming":
+              "grooming",
+
+            "bath-spa":
+              "bath",
+
+            "nail-paw-care":
+              "care",
+
+            "de-shedding":
+              "coat",
+
+            "signature-spa":
+              "grooming",
+
+            "haircut-styling":
+              "grooming",
+
+            "conditioning":
+              "bath",
+
+            "puppy-grooming":
+              "care"
+
+          };
+
+
+          const category =
+            serviceMap[selectedService];
+
+
+          if (category) {
+
+            const matchingButton =
+              document.querySelector(
+                `[data-filter="${category}"]`
+              );
+
+            if (matchingButton) {
+              matchingButton.click();
+            }
+
+          }
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Discover the FURLUXE story — premium pet grooming built around comfort, care and exceptional attention to detail.">
+
+  <title>Our Story | FURLUXE</title>
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <style>
+    /* =====================================================
+           ABOUT PAGE
+        ====================================================== */
+
+    .about-page {
+      background: var(--ivory);
+    }
+
+
+    /* =====================================================
+           HERO
+        ====================================================== */
+
+    .about-hero {
+      position: relative;
+
+      min-height: 610px;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      background: var(--forest);
+    }
+
+
+    .about-hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 650px;
+      height: 650px;
+
+      right: -280px;
+      top: -270px;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.18);
+
+      border-radius: 50%;
+    }
+
+
+    .about-hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 400px;
+      height: 400px;
+
+      left: -230px;
+      bottom: -270px;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.06);
+
+      border-radius: 50%;
+    }
+
+
+    .about-hero-grid {
+      position: relative;
+
+      z-index: 2;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 0.9fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+
+    .about-hero-content {
+      max-width: 650px;
+    }
+
+
+    .about-hero .section-tag {
+      color: var(--gold-light);
+    }
+
+
+    .about-hero h1 {
+      margin-top: 20px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(3rem, 6vw, 5.5rem);
+
+      line-height: 1;
+
+      letter-spacing: -0.04em;
+    }
+
+
+    .about-hero h1 span {
+      display: block;
+
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .about-hero p {
+      max-width: 590px;
+
+      margin-top: 25px;
+
+      color:
+        rgba(255, 255, 255, 0.62);
+
+      line-height: 1.8;
+    }
+
+
+    .about-hero-buttons {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 32px;
+    }
+
+
+    .about-primary-btn,
+    .about-secondary-btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 14px 22px;
+
+      border-radius: 50px;
+
+      text-decoration: none;
+
+      font-size: 0.65rem;
+
+      font-weight: 700;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+
+    .about-primary-btn {
+      background: var(--gold);
+
+      color: var(--white);
+    }
+
+
+    .about-primary-btn:hover {
+      transform: translateY(-3px);
+
+      background:
+        var(--gold-light);
+    }
+
+
+    .about-secondary-btn {
+      border:
+        1px solid rgba(255, 255, 255, 0.2);
+
+      color: var(--white);
+    }
+
+
+    .about-secondary-btn:hover {
+      transform: translateY(-3px);
+
+      background:
+        rgba(255, 255, 255, 0.08);
+    }
+
+
+    /* =====================================================
+           HERO IMAGE
+        ====================================================== */
+
+    .about-hero-image {
+      position: relative;
+
+      height: 520px;
+
+      border-radius: 170px 170px 30px 30px;
+
+      overflow: hidden;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.25);
+
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.25);
+
+      animation:
+        heroFloat 5s ease-in-out infinite;
+    }
+
+
+    .about-hero-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+
+    .about-hero-image::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(to top,
+          rgba(24, 53, 47, 0.35),
+          transparent 50%);
+    }
+
+
+    @keyframes heroFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+    }
+
+
+    .hero-image-label {
+      position: absolute;
+
+      z-index: 2;
+
+      left: 25px;
+      bottom: 25px;
+
+      padding: 10px 15px;
+
+      border-radius: 50px;
+
+      background:
+        rgba(255, 255, 255, 0.9);
+
+      color: var(--forest);
+
+      font-size: 0.55rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =====================================================
+           STORY
+        ====================================================== */
+
+    .story-section {
+      padding: 115px 0;
+    }
+
+
+    .story-grid {
+      display: grid;
+
+      grid-template-columns:
+        0.85fr 1fr;
+
+      gap: 90px;
+
+      align-items: center;
+    }
+
+
+    .story-image {
+      position: relative;
+
+      height: 570px;
+
+      border-radius:
+        30px 150px 30px 30px;
+
+      overflow: hidden;
+    }
+
+
+    .story-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.8s ease;
+    }
+
+
+    .story-image:hover img {
+      transform: scale(1.04);
+    }
+
+
+    .story-image::before {
+      content: "";
+
+      position: absolute;
+
+      z-index: 2;
+
+      width: 110px;
+      height: 110px;
+
+      top: -15px;
+      right: -15px;
+
+      border:
+        1px solid var(--gold);
+
+      border-radius: 50%;
+    }
+
+
+    .story-content .section-tag {
+      color: var(--gold);
+    }
+
+
+    .story-content h2 {
+      margin-top: 17px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.4rem, 4vw, 3.7rem);
+
+      line-height: 1.08;
+    }
+
+
+    .story-content h2 span {
+      color: var(--gold);
+
+      font-style: italic;
+    }
+
+
+    .story-content p {
+      margin-top: 20px;
+
+      color: var(--muted);
+
+      line-height: 1.85;
+    }
+
+
+    .story-quote {
+      position: relative;
+
+      margin-top: 30px;
+
+      padding: 25px 25px 25px 30px;
+
+      border-left:
+        3px solid var(--gold);
+
+      background:
+        var(--beige-light);
+
+      border-radius:
+        0 15px 15px 0;
+    }
+
+
+    .story-quote p {
+      margin: 0;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.15rem;
+
+      font-style: italic;
+
+      line-height: 1.6;
+    }
+
+
+    .story-signature {
+      margin-top: 25px;
+
+      color: var(--gold);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.2rem;
+    }
+
+
+    /* =====================================================
+           BRAND PHILOSOPHY
+        ====================================================== */
+
+    .philosophy-section {
+      padding: 110px 0;
+
+      background: var(--beige-light);
+    }
+
+
+    .philosophy-header {
+      max-width: 720px;
+
+      margin: 0 auto 55px;
+
+      text-align: center;
+    }
+
+
+    .philosophy-header h2 {
+      margin-top: 16px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.3rem, 4vw, 3.5rem);
+    }
+
+
+    .philosophy-header h2 span {
+      color: var(--gold);
+
+      font-style: italic;
+    }
+
+
+    .philosophy-header p {
+      margin-top: 17px;
+
+      color: var(--muted);
+
+      line-height: 1.8;
+    }
+
+
+    .philosophy-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 22px;
+    }
+
+
+    .philosophy-card {
+      position: relative;
+
+      padding: 38px 30px;
+
+      border:
+        1px solid rgba(24, 53, 47, 0.08);
+
+      border-radius: 25px;
+
+      background: var(--white);
+
+      overflow: hidden;
+
+      transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+
+    .philosophy-card:hover {
+      transform:
+        translateY(-8px);
+
+      box-shadow:
+        0 25px 55px rgba(24, 53, 47, 0.09);
+    }
+
+
+    .philosophy-number {
+      position: absolute;
+
+      top: 18px;
+      right: 23px;
+
+      color:
+        rgba(24, 53, 47, 0.07);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 3.5rem;
+    }
+
+
+    .philosophy-icon {
+      width: 52px;
+      height: 52px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--forest);
+
+      color: var(--gold-light);
+
+      font-size: 0.9rem;
+    }
+
+
+    .philosophy-card h3 {
+      margin-top: 22px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.35rem;
+    }
+
+
+    .philosophy-card p {
+      margin-top: 10px;
+
+      color: var(--muted);
+
+      font-size: 0.67rem;
+
+      line-height: 1.75;
+    }
+
+
+    /* =====================================================
+           FURLUXE MEANING
+        ====================================================== */
+
+    .meaning-section {
+      padding: 115px 0;
+
+      background: var(--forest);
+
+      overflow: hidden;
+    }
+
+
+    .meaning-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 80px;
+
+      align-items: center;
+    }
+
+
+    .meaning-content .section-tag {
+      color: var(--gold-light);
+    }
+
+
+    .meaning-content h2 {
+      margin-top: 17px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.4rem, 4vw, 3.8rem);
+
+      line-height: 1.08;
+    }
+
+
+    .meaning-content h2 span {
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .meaning-content p {
+      margin-top: 20px;
+
+      color:
+        rgba(255, 255, 255, 0.6);
+
+      line-height: 1.8;
+    }
+
+
+    .meaning-visual {
+      position: relative;
+
+      min-height: 400px;
+
+      display: grid;
+
+      place-items: center;
+    }
+
+
+    .meaning-circle {
+      width: 330px;
+      height: 330px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.4);
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 0 35px rgba(198, 162, 106, 0.04),
+        0 0 0 70px rgba(198, 162, 106, 0.025);
+
+      animation:
+        slowPulse 5s ease-in-out infinite;
+    }
+
+
+    .meaning-circle i {
+      color: var(--gold-light);
+
+      font-size: 2.4rem;
+    }
+
+
+    .meaning-circle strong {
+      margin-top: 17px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 2rem;
+    }
+
+
+    .meaning-circle span {
+      margin-top: 5px;
+
+      color:
+        rgba(255, 255, 255, 0.5);
+
+      font-size: 0.55rem;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+    }
+
+
+    @keyframes slowPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.025);
+      }
+
+    }
+
+
+    /* =====================================================
+           EXPERIENCE
+        ====================================================== */
+
+    .experience-section {
+      padding: 110px 0;
+    }
+
+
+    .experience-header {
+      max-width: 700px;
+
+      margin: 0 auto 55px;
+
+      text-align: center;
+    }
+
+
+    .experience-header h2 {
+      margin-top: 16px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.3rem, 4vw, 3.5rem);
+    }
+
+
+    .experience-header h2 span {
+      color: var(--gold);
+
+      font-style: italic;
+    }
+
+
+    .experience-header p {
+      margin-top: 15px;
+
+      color: var(--muted);
+
+      line-height: 1.8;
+    }
+
+
+    .experience-steps {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .experience-step {
+      text-align: center;
+
+      padding: 25px 15px;
+    }
+
+
+    .step-icon {
+      width: 70px;
+      height: 70px;
+
+      margin: auto;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid var(--gold);
+
+      border-radius: 50%;
+
+      color: var(--gold);
+
+      font-size: 1rem;
+
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+
+    .experience-step:hover .step-icon {
+      background: var(--forest);
+
+      color: var(--gold-light);
+
+      transform:
+        translateY(-6px);
+    }
+
+
+    .experience-step h3 {
+      margin-top: 20px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.25rem;
+    }
+
+
+    .experience-step p {
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      font-size: 0.64rem;
+
+      line-height: 1.7;
+    }
+
+
+    /* =====================================================
+           CTA
+        ====================================================== */
+
+    .about-cta {
+      padding: 105px 0;
+
+      background: var(--beige-light);
+
+      text-align: center;
+    }
+
+
+    .about-cta-content {
+      max-width: 700px;
+
+      margin: auto;
+    }
+
+
+    .about-cta h2 {
+      margin-top: 17px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.4rem, 5vw, 4rem);
+
+      line-height: 1.05;
+    }
+
+
+    .about-cta h2 span {
+      color: var(--gold);
+
+      font-style: italic;
+    }
+
+
+    .about-cta p {
+      max-width: 570px;
+
+      margin: 18px auto 30px;
+
+      color: var(--muted);
+
+      line-height: 1.75;
+    }
+
+
+    .about-cta-button {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 15px 26px;
+
+      border-radius: 50px;
+
+      background: var(--forest);
+
+      color: var(--white);
+
+      text-decoration: none;
+
+      font-size: 0.65rem;
+
+      font-weight: 700;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+
+    .about-cta-button:hover {
+      transform:
+        translateY(-3px);
+
+      background: var(--gold);
+    }
+
+
+    /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+    @media (max-width: 950px) {
+
+      .about-hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+      }
+
+
+      .about-hero {
+        padding:
+          90px 0;
+      }
+
+
+      .about-hero-image {
+        max-width: 560px;
+
+        width: 100%;
+
+        margin: auto;
+      }
+
+
+      .story-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+      }
+
+
+      .story-image {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: auto;
+      }
+
+
+      .meaning-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+      }
+
+
+      .philosophy-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .experience-steps {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .about-hero {
+        padding:
+          75px 0;
+      }
+
+
+      .about-hero-image {
+        height: 430px;
+
+        border-radius:
+          100px 100px 25px 25px;
+      }
+
+
+      .story-section,
+      .philosophy-section,
+      .meaning-section,
+      .experience-section {
+        padding: 75px 0;
+      }
+
+
+      .story-image {
+        height: 450px;
+
+        border-radius:
+          25px 100px 25px 25px;
+      }
+
+
+      .philosophy-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .experience-steps {
+        grid-template-columns: 1fr;
+      }
+
+
+      .meaning-circle {
+        width: 270px;
+        height: 270px;
+      }
+
+
+      .about-hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body class="about-page">
+
+
+  <!-- =====================================================
+         PAGE LOADER
+    ====================================================== -->
+
+  <div class="page-loader">
+
+    <div class="loader-content">
+
+      <div class="loader-paw">
+        <i class="fa-solid fa-paw"></i>
+      </div>
+
+      <h2>FURLUXE</h2>
+
+      <p>
+        Luxury Grooming. Exceptional Care.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+  <header class="header">
+
+    <nav class="navbar">
+
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-mark">
+          <i class="fa-solid fa-paw"></i>
+        </span>
+
+        <span class="logo-text">
+          FURLUXE
+        </span>
+
+      </a>
+
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="index.html" class="active">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="services.html">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="grooming.html">
+            Grooming
+          </a>
+        </li>
+
+        <li>
+          <a href="packages.html">
+            Packages
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+
+      <a href="appointment.html" class="nav-book-btn">
+
+        Book Appointment
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+
+      <button class="menu-toggle" aria-label="Open navigation menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =================================================
+             HERO
+        ================================================== -->
+
+    <section class="about-hero">
+
+      <div class="container">
+
+        <div class="about-hero-grid">
+
+
+          <div class="about-hero-content reveal">
+
+            <div class="section-tag">
+              OUR STORY
+            </div>
+
+
+            <h1>
+              Where care
+              <span>meets luxury.</span>
+            </h1>
+
+
+            <p>
+              FURLUXE was created with one simple
+              belief: grooming should feel as good
+              as it looks. A calm environment,
+              thoughtful care and a beautiful
+              experience — for pets and their people.
+            </p>
+
+
+            <div class="about-hero-buttons">
+
+              <a href="appointment.html" class="about-primary-btn">
+
+                Book an Appointment
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+              </a>
+
+
+              <a href="services.html" class="about-secondary-btn">
+
+                Explore Services
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="about-hero-image reveal">
+
+            <img
+              src="https://img.magnific.com/free-photo/adorable-portrait-pets-surrounded-by-flowers_23-2151850027.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="Happy dog enjoying premium pet care" loading="lazy">
+
+
+            <div class="hero-image-label">
+              Thoughtful care. Beautiful results.
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             STORY
+        ================================================== -->
+
+    <section class="story-section">
+
+      <div class="container">
+
+        <div class="story-grid">
+
+
+          <div class="story-image reveal">
+
+            <img
+              src="https://images.unsplash.com/photo-1599194921977-f89d8bd0eefb?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2F0JTIwYW5kJTIwZG9nfGVufDB8fDB8fHww"
+              alt="Happy dog receiving loving care" loading="lazy">
+
+          </div>
+
+
+          <div class="story-content reveal">
+
+            <div class="section-tag">
+              WHY FURLUXE
+            </div>
+
+
+            <h2>
+              Because every pet
+              <span>deserves to feel special.</span>
+            </h2>
+
+
+            <p>
+              We noticed something simple: pet
+              grooming is often treated as a task,
+              when it can be so much more.
+            </p>
+
+
+            <p>
+              FURLUXE was imagined as a place where
+              grooming becomes an experience —
+              one built around patience, comfort,
+              cleanliness and attention to detail.
+            </p>
+
+
+            <p>
+              From the first hello to the final
+              little tail wag, every part of the
+              experience is designed to make pets
+              feel comfortable and cared for.
+            </p>
+
+
+            <div class="story-quote">
+
+              <p>
+                “Beautiful grooming starts with
+                making them feel safe.”
+              </p>
+
+            </div>
+
+
+            <div class="story-signature">
+              — The FURLUXE Philosophy
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             PHILOSOPHY
+        ================================================== -->
+
+    <section class="philosophy-section">
+
+      <div class="container">
+
+
+        <div class="philosophy-header reveal">
+
+          <div class="section-tag">
+            OUR PHILOSOPHY
+          </div>
+
+
+          <h2>
+            Three things we
+            <span>never compromise.</span>
+          </h2>
+
+
+          <p>
+            Premium does not simply mean beautiful.
+            It means thoughtful, consistent and
+            genuinely caring.
+          </p>
+
+        </div>
+
+
+        <div class="philosophy-grid">
+
+
+          <article class="philosophy-card reveal">
+
+            <span class="philosophy-number">
+              01
+            </span>
+
+
+            <div class="philosophy-icon">
+
+              <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+
+            <h3>
+              Comfort First
+            </h3>
+
+
+            <p>
+              Every pet has a different personality.
+              We take time to understand them and
+              keep their comfort at the centre of
+              the grooming experience.
+            </p>
+
+          </article>
+
+
+          <article class="philosophy-card reveal">
+
+            <span class="philosophy-number">
+              02
+            </span>
+
+
+            <div class="philosophy-icon">
+
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            </div>
+
+
+            <h3>
+              Beautifully Detailed
+            </h3>
+
+
+            <p>
+              From coat finishing to paw care, we
+              focus on the small details that make
+              a noticeable difference.
+            </p>
+
+          </article>
+
+
+          <article class="philosophy-card reveal">
+
+            <span class="philosophy-number">
+              03
+            </span>
+
+
+            <div class="philosophy-icon">
+
+              <i class="fa-solid fa-shield-heart"></i>
+
+            </div>
+
+
+            <h3>
+              Trusted Care
+            </h3>
+
+
+            <p>
+              We want pet parents to feel confident
+              knowing their companions are treated
+              with patience, respect and attention.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             MEANING
+        ================================================== -->
+
+    <section class="meaning-section">
+
+      <div class="container">
+
+        <div class="meaning-grid">
+
+
+          <div class="meaning-content reveal">
+
+            <div class="section-tag">
+              THE NAME
+            </div>
+
+
+            <h2>
+              Why we call it
+              <span>FURLUXE.</span>
+            </h2>
+
+
+            <p>
+              “Fur” represents the pets at the heart
+              of everything we do. “Luxe” represents
+              the elevated experience we want every
+              pet and pet parent to enjoy.
+            </p>
+
+
+            <p>
+              Together, FURLUXE represents our idea
+              of premium pet grooming without
+              losing the warmth, friendliness and
+              genuine care that pets deserve.
+            </p>
+
+          </div>
+
+
+          <div class="meaning-visual reveal">
+
+            <div class="meaning-circle">
+
+              <i class="fa-solid fa-paw"></i>
+
+              <strong>
+                FUR + LUXE
+              </strong>
+
+              <span>
+                Luxury Grooming Experience
+              </span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             EXPERIENCE
+        ================================================== -->
+
+    <section class="experience-section">
+
+      <div class="container">
+
+
+        <div class="experience-header reveal">
+
+          <div class="section-tag">
+            THE FURLUXE EXPERIENCE
+          </div>
+
+
+          <h2>
+            Simple for you.
+            <span>Special for them.</span>
+          </h2>
+
+
+          <p>
+            From appointment to pickup, we keep the
+            process clear, comfortable and convenient.
+          </p>
+
+        </div>
+
+
+        <div class="experience-steps">
+
+
+          <div class="experience-step reveal">
+
+            <div class="step-icon">
+
+              <i class="fa-regular fa-calendar"></i>
+
+            </div>
+
+
+            <h3>
+              01. Book
+            </h3>
+
+
+            <p>
+              Choose a convenient appointment time
+              for your pet.
+            </p>
+
+          </div>
+
+
+          <div class="experience-step reveal">
+
+            <div class="step-icon">
+
+              <i class="fa-solid fa-paw"></i>
+
+            </div>
+
+
+            <h3>
+              02. Arrive
+            </h3>
+
+
+            <p>
+              Bring your pet in and let us know
+              about their grooming needs.
+            </p>
+
+          </div>
+
+
+          <div class="experience-step reveal">
+
+            <div class="step-icon">
+
+              <i class="fa-solid fa-scissors"></i>
+
+            </div>
+
+
+            <h3>
+              03. Groom
+            </h3>
+
+
+            <p>
+              Our team takes care of the grooming
+              with patience and attention.
+            </p>
+
+          </div>
+
+
+          <div class="experience-step reveal">
+
+            <div class="step-icon">
+
+              <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+
+            <h3>
+              04. Glow
+            </h3>
+
+
+            <p>
+              Pick up your freshly groomed,
+              happy companion.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             CTA
+        ================================================== -->
+
+    <section class="about-cta">
+
+      <div class="container">
+
+        <div class="about-cta-content reveal">
+
+          <div class="section-tag">
+            COME VISIT US
+          </div>
+
+
+          <h2>
+            Their next
+            <span>good day</span>
+            starts here.
+          </h2>
+
+
+          <p>
+            Give your pet a grooming experience
+            designed around comfort, care and a
+            little extra luxury.
+          </p>
+
+
+          <a href="appointment.html" class="about-cta-button">
+
+            Book an Appointment
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo footer-logo">
+
+            <span class="logo-mark">
+              <i class="fa-solid fa-paw"></i>
+            </span>
+
+            <span class="logo-text">
+              FURLUXE
+            </span>
+
+          </a>
+
+
+          <p>
+            Luxury grooming with a softer touch.
+            Thoughtful care for the pets who make
+            life a little better.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+
+              <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="Facebook">
+
+              <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="YouTube">
+
+              <i class="fa-brands fa-youtube"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="WhatsApp">
+
+              <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="grooming.html">
+            Grooming
+          </a>
+
+          <a href="packages.html">
+            Packages
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            FURLUXE
+          </h4>
+
+          <a href="team.html">
+            Our Groomers
+          </a>
+
+          <a href="about.html">
+            Our Story
+          </a>
+
+          <a href="appointment.html">
+            Appointments
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Support
+          </h4>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+          <a href="help.html">
+            Help Center
+          </a>
+
+          <a href="faq.html">
+            FAQs
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          ©
+          <span id="currentYear"></span>
+          FURLUXE.
+          All rights reserved.
+        </p>
+
+
+        <p>
+          Luxury Grooming. Exceptional Care.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+  <a href="https://wa.me/919999999999?text=Hello%20FURLUXE%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with FURLUXE on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>
+      Chat with us
+    </span>
+
+  </a>
+
+
+  <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+  <button class="back-to-top" aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- Main JavaScript -->
+  <script src="js/script.js"></script>
+
+
+  <!-- Page-specific year -->
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+        const year =
+          document.getElementById(
+            "currentYear"
+          );
+
+        if (year) {
+
+          year.textContent =
+            new Date().getFullYear();
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

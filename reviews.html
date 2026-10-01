@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Read what FURLUXE customers say about their pet grooming experience.">
+
+  <title>Reviews | FURLUXE</title>
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <style>
+    /* =====================================================
+           REVIEWS PAGE
+        ====================================================== */
+
+    .reviews-page {
+      background: var(--ivory);
+    }
+
+
+    /* =====================================================
+           HERO
+        ====================================================== */
+
+    .reviews-hero {
+      position: relative;
+
+      min-height: 500px;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      background: var(--forest);
+    }
+
+
+    .reviews-hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 550px;
+      height: 550px;
+
+      right: -240px;
+      top: -260px;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.2);
+
+      border-radius: 50%;
+    }
+
+
+    .reviews-hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      left: -170px;
+      bottom: -180px;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.07);
+
+      border-radius: 50%;
+    }
+
+
+    .reviews-hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 800px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+
+    .reviews-hero .section-tag {
+      color: var(--gold-light);
+    }
+
+
+    .reviews-hero h1 {
+      margin-top: 18px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(3rem, 6vw, 5rem);
+
+      line-height: 1.05;
+    }
+
+
+    .reviews-hero h1 span {
+      display: block;
+
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .reviews-hero p {
+      max-width: 620px;
+
+      margin: 22px auto 0;
+
+      color:
+        rgba(255, 255, 255, 0.62);
+
+      line-height: 1.8;
+    }
+
+
+    .demo-note {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      margin-top: 25px;
+
+      padding: 9px 15px;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.3);
+
+      border-radius: 50px;
+
+      color: var(--gold-light);
+
+      font-size: 0.55rem;
+
+      letter-spacing: 0.06em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =====================================================
+           RATING SUMMARY
+        ====================================================== */
+
+    .rating-section {
+      padding: 80px 0 40px;
+    }
+
+
+    .rating-card {
+      display: grid;
+
+      grid-template-columns:
+        0.8fr 1fr 1fr;
+
+      gap: 30px;
+
+      padding: 38px;
+
+      border:
+        1px solid rgba(24, 53, 47, 0.08);
+
+      border-radius: 28px;
+
+      background: var(--white);
+
+      box-shadow:
+        0 20px 55px rgba(24, 53, 47, 0.06);
+    }
+
+
+    .overall-rating {
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: center;
+
+      padding: 20px;
+
+      border-right:
+        1px solid rgba(24, 53, 47, 0.08);
+    }
+
+
+    .overall-rating strong {
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 4rem;
+
+      line-height: 1;
+    }
+
+
+    .stars {
+      display: flex;
+
+      gap: 5px;
+
+      margin-top: 12px;
+
+      color: var(--gold);
+
+      font-size: 0.8rem;
+    }
+
+
+    .overall-rating span {
+      margin-top: 9px;
+
+      color: var(--muted);
+
+      font-size: 0.58rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    .rating-bars {
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      padding: 0 15px;
+    }
+
+
+    .rating-row {
+      display: grid;
+
+      grid-template-columns:
+        25px 1fr 35px;
+
+      gap: 10px;
+
+      align-items: center;
+    }
+
+
+    .rating-row label {
+      color: var(--muted);
+
+      font-size: 0.6rem;
+
+      font-weight: 600;
+    }
+
+
+    .bar {
+      height: 6px;
+
+      overflow: hidden;
+
+      border-radius: 20px;
+
+      background:
+        #edf0ed;
+    }
+
+
+    .bar span {
+      display: block;
+
+      height: 100%;
+
+      border-radius: inherit;
+
+      background: var(--gold);
+    }
+
+
+    .rating-row small {
+      color: var(--muted);
+
+      font-size: 0.55rem;
+
+      text-align: right;
+    }
+
+
+    .rating-message {
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      padding-left: 20px;
+    }
+
+
+    .rating-message i {
+      color: var(--gold);
+
+      font-size: 1.4rem;
+    }
+
+
+    .rating-message h3 {
+      margin-top: 14px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.5rem;
+    }
+
+
+    .rating-message p {
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      font-size: 0.65rem;
+
+      line-height: 1.7;
+    }
+
+
+    /* =====================================================
+           REVIEWS
+        ====================================================== */
+
+    .reviews-section {
+      padding: 70px 0 110px;
+    }
+
+
+    .reviews-header {
+      max-width: 700px;
+
+      margin: 0 auto 50px;
+
+      text-align: center;
+    }
+
+
+    .reviews-header h2 {
+      margin-top: 16px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.3rem, 4vw, 3.6rem);
+
+      line-height: 1.1;
+    }
+
+
+    .reviews-header h2 span {
+      color: var(--gold);
+
+      font-style: italic;
+    }
+
+
+    .reviews-header p {
+      margin-top: 15px;
+
+      color: var(--muted);
+
+      line-height: 1.8;
+    }
+
+
+    .reviews-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 22px;
+    }
+
+
+    .review-card {
+      position: relative;
+
+      padding: 32px;
+
+      border:
+        1px solid rgba(24, 53, 47, 0.08);
+
+      border-radius: 25px;
+
+      background: var(--white);
+
+      overflow: hidden;
+
+      transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+
+    .review-card:hover {
+      transform:
+        translateY(-8px);
+
+      box-shadow:
+        0 25px 60px rgba(24, 53, 47, 0.09);
+    }
+
+
+    .review-card::before {
+      content: "“";
+
+      position: absolute;
+
+      top: 8px;
+      right: 22px;
+
+      color:
+        rgba(198, 162, 106, 0.13);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 7rem;
+
+      line-height: 1;
+    }
+
+
+    .review-top {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+    }
+
+
+    .review-stars {
+      display: flex;
+
+      gap: 4px;
+
+      color: var(--gold);
+
+      font-size: 0.65rem;
+    }
+
+
+    .review-pet {
+      color:
+        rgba(24, 53, 47, 0.35);
+
+      font-size: 0.7rem;
+    }
+
+
+    .review-text {
+      position: relative;
+
+      z-index: 1;
+
+      margin-top: 25px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.05rem;
+
+      line-height: 1.65;
+    }
+
+
+    .review-author {
+      display: flex;
+
+      align-items: center;
+
+      gap: 13px;
+
+      margin-top: 28px;
+
+      padding-top: 20px;
+
+      border-top:
+        1px solid rgba(24, 53, 47, 0.08);
+    }
+
+
+    .author-avatar {
+      width: 43px;
+      height: 43px;
+
+      display: grid;
+      place-items: center;
+
+      flex-shrink: 0;
+
+      border-radius: 50%;
+
+      background: var(--forest);
+
+      color: var(--gold-light);
+
+      font-size: 0.65rem;
+
+      font-weight: 700;
+    }
+
+
+    .author-info strong {
+      display: block;
+
+      color: var(--forest);
+
+      font-size: 0.65rem;
+    }
+
+
+    .author-info span {
+      display: block;
+
+      margin-top: 3px;
+
+      color: var(--muted);
+
+      font-size: 0.55rem;
+    }
+
+
+    /* =====================================================
+           FEATURED REVIEW
+        ====================================================== */
+
+    .featured-review-section {
+      padding: 100px 0;
+
+      background: var(--beige-light);
+    }
+
+
+    .featured-review {
+      display: grid;
+
+      grid-template-columns:
+        0.75fr 1fr;
+
+      gap: 60px;
+
+      align-items: center;
+    }
+
+
+    .featured-image {
+      height: 470px;
+
+      overflow: hidden;
+
+      border-radius:
+        150px 30px 30px 30px;
+    }
+
+
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.7s ease;
+    }
+
+
+    .featured-image:hover img {
+      transform: scale(1.04);
+    }
+
+
+    .featured-content .section-tag {
+      color: var(--gold);
+    }
+
+
+    .featured-content h2 {
+      margin-top: 17px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.3rem, 4vw, 3.5rem);
+
+      line-height: 1.1;
+    }
+
+
+    .featured-content h2 span {
+      color: var(--gold);
+
+      font-style: italic;
+    }
+
+
+    .featured-quote {
+      margin-top: 25px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.25rem;
+
+      font-style: italic;
+
+      line-height: 1.65;
+    }
+
+
+    .featured-author {
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
+
+      margin-top: 30px;
+    }
+
+
+    .featured-author-avatar {
+      width: 50px;
+      height: 50px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--forest);
+
+      color: var(--gold-light);
+
+      font-weight: 700;
+    }
+
+
+    .featured-author strong {
+      display: block;
+
+      color: var(--forest);
+
+      font-size: 0.7rem;
+    }
+
+
+    .featured-author span {
+      display: block;
+
+      margin-top: 4px;
+
+      color: var(--muted);
+
+      font-size: 0.55rem;
+    }
+
+
+    /* =====================================================
+           REVIEW CTA
+        ====================================================== */
+
+    .review-cta {
+      padding: 105px 0;
+
+      background: var(--forest);
+
+      text-align: center;
+    }
+
+
+    .review-cta-content {
+      max-width: 700px;
+
+      margin: auto;
+    }
+
+
+    .review-cta .section-tag {
+      color: var(--gold-light);
+    }
+
+
+    .review-cta h2 {
+      margin-top: 17px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.4rem, 5vw, 4rem);
+
+      line-height: 1.08;
+    }
+
+
+    .review-cta h2 span {
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .review-cta p {
+      max-width: 570px;
+
+      margin: 18px auto 30px;
+
+      color:
+        rgba(255, 255, 255, 0.6);
+
+      line-height: 1.8;
+    }
+
+
+    .review-cta-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+
+    .review-btn-primary,
+    .review-btn-secondary {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 14px 23px;
+
+      border-radius: 50px;
+
+      text-decoration: none;
+
+      font-size: 0.62rem;
+
+      font-weight: 700;
+
+      transition:
+        transform 0.3s ease;
+    }
+
+
+    .review-btn-primary {
+      background: var(--gold);
+
+      color: var(--white);
+    }
+
+
+    .review-btn-secondary {
+      border:
+        1px solid rgba(255, 255, 255, 0.2);
+
+      color: var(--white);
+    }
+
+
+    .review-btn-primary:hover,
+    .review-btn-secondary:hover {
+      transform:
+        translateY(-3px);
+    }
+
+
+    /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+    @media (max-width: 950px) {
+
+      .rating-card {
+        grid-template-columns: 1fr 1fr;
+      }
+
+
+      .overall-rating {
+        border-right: none;
+
+        border-bottom:
+          1px solid rgba(24, 53, 47, 0.08);
+      }
+
+
+      .rating-message {
+        border-bottom:
+          1px solid rgba(24, 53, 47, 0.08);
+
+        padding-bottom: 20px;
+      }
+
+
+      .reviews-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .featured-review {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+      }
+
+
+      .featured-image {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: auto;
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .reviews-hero {
+        min-height: 470px;
+      }
+
+
+      .rating-section {
+        padding-top: 55px;
+      }
+
+
+      .rating-card {
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+      }
+
+
+      .overall-rating {
+        border-right: none;
+
+        border-bottom:
+          1px solid rgba(24, 53, 47, 0.08);
+
+        padding-bottom: 30px;
+      }
+
+
+      .rating-message {
+        border-bottom: none;
+
+        padding-left: 0;
+      }
+
+
+      .rating-bars {
+        padding: 10px 0;
+      }
+
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .reviews-section,
+      .featured-review-section {
+        padding: 75px 0;
+      }
+
+
+      .featured-image {
+        height: 400px;
+
+        border-radius:
+          100px 25px 25px 25px;
+      }
+
+
+      .review-cta {
+        padding: 80px 0;
+      }
+
+
+      .review-cta-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body class="reviews-page">
+
+
+  <!-- =====================================================
+         PAGE LOADER
+    ====================================================== -->
+
+  <div class="page-loader">
+
+    <div class="loader-content">
+
+      <div class="loader-paw">
+        <i class="fa-solid fa-paw"></i>
+      </div>
+
+      <h2>FURLUXE</h2>
+
+      <p>
+        Luxury Grooming. Exceptional Care.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+  <header class="header">
+
+    <nav class="navbar">
+
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-mark">
+          <i class="fa-solid fa-paw"></i>
+        </span>
+
+        <span class="logo-text">
+          FURLUXE
+        </span>
+
+      </a>
+
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="index.html" class="active">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="services.html">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="grooming.html">
+            Grooming
+          </a>
+        </li>
+
+        <li>
+          <a href="packages.html">
+            Packages
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+
+      <a href="appointment.html" class="nav-book-btn">
+
+        Book Appointment
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+
+      <button class="menu-toggle" aria-label="Open navigation menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =================================================
+             HERO
+        ================================================== -->
+
+    <section class="reviews-hero">
+
+      <div class="container">
+
+        <div class="reviews-hero-content reveal">
+
+          <div class="section-tag">
+            HAPPY PETS. HAPPY PARENTS.
+          </div>
+
+
+          <h1>
+            Words from our
+            <span>FURLUXE family.</span>
+          </h1>
+
+
+          <p>
+            Discover the kind of experience we aim
+            to create every time a pet walks through
+            our doors.
+          </p>
+
+
+          <div class="demo-note">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            Sample testimonials for website demo
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             RATING SUMMARY
+        ================================================== -->
+
+    <section class="rating-section">
+
+      <div class="container">
+
+        <div class="rating-card reveal">
+
+
+          <div class="overall-rating">
+
+            <strong>
+              4.9
+            </strong>
+
+
+            <div class="stars">
+
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+
+
+            <span>
+              Sample rating
+            </span>
+
+          </div>
+
+
+          <div class="rating-bars">
+
+            <div class="rating-row">
+
+              <label>5</label>
+
+              <div class="bar">
+                <span style="width: 92%;"></span>
+              </div>
+
+              <small>92%</small>
+
+            </div>
+
+
+            <div class="rating-row">
+
+              <label>4</label>
+
+              <div class="bar">
+                <span style="width: 6%;"></span>
+              </div>
+
+              <small>6%</small>
+
+            </div>
+
+
+            <div class="rating-row">
+
+              <label>3</label>
+
+              <div class="bar">
+                <span style="width: 2%;"></span>
+              </div>
+
+              <small>2%</small>
+
+            </div>
+
+
+            <div class="rating-row">
+
+              <label>2</label>
+
+              <div class="bar">
+                <span style="width: 0%;"></span>
+              </div>
+
+              <small>0%</small>
+
+            </div>
+
+
+            <div class="rating-row">
+
+              <label>1</label>
+
+              <div class="bar">
+                <span style="width: 0%;"></span>
+              </div>
+
+              <small>0%</small>
+
+            </div>
+
+          </div>
+
+
+          <div class="rating-message">
+
+            <i class="fa-solid fa-heart"></i>
+
+
+            <h3>
+              More than a grooming visit.
+            </h3>
+
+
+            <p>
+              We focus on creating a calm,
+              comfortable and thoughtful experience
+              for every pet.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             REVIEWS
+        ================================================== -->
+
+    <section class="reviews-section">
+
+      <div class="container">
+
+
+        <div class="reviews-header reveal">
+
+          <div class="section-tag">
+            CUSTOMER LOVE
+          </div>
+
+
+          <h2>
+            Little words that
+            <span>mean a lot.</span>
+          </h2>
+
+
+          <p>
+            These sample testimonials show how
+            customer feedback can be presented on
+            the FURLUXE website.
+          </p>
+
+        </div>
+
+
+        <div class="reviews-grid">
+
+
+          <!-- REVIEW 01 -->
+
+          <article class="review-card reveal">
+
+            <div class="review-top">
+
+              <div class="review-stars">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+
+              </div>
+
+
+              <div class="review-pet">
+
+                <i class="fa-solid fa-dog"></i>
+
+              </div>
+
+            </div>
+
+
+            <p class="review-text">
+
+              “The whole experience felt so calm.
+              My little one came home looking
+              beautiful and completely relaxed.”
+
+            </p>
+
+
+            <div class="review-author">
+
+              <div class="author-avatar">
+                AS
+              </div>
+
+
+              <div class="author-info">
+
+                <strong>
+                  Ananya S.
+                </strong>
+
+                <span>
+                  Pet parent • Bruno
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 02 -->
+
+          <article class="review-card reveal">
+
+            <div class="review-top">
+
+              <div class="review-stars">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+
+              </div>
+
+
+              <div class="review-pet">
+
+                <i class="fa-solid fa-paw"></i>
+
+              </div>
+
+            </div>
+
+
+            <p class="review-text">
+
+              “I loved how clearly everything was
+              explained before the grooming started.
+              It made me feel very comfortable.”
+
+            </p>
+
+
+            <div class="review-author">
+
+              <div class="author-avatar">
+                RK
+              </div>
+
+
+              <div class="author-info">
+
+                <strong>
+                  Riya K.
+                </strong>
+
+                <span>
+                  Pet parent • Milo
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 03 -->
+
+          <article class="review-card reveal">
+
+            <div class="review-top">
+
+              <div class="review-stars">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+
+              </div>
+
+
+              <div class="review-pet">
+
+                <i class="fa-solid fa-dog"></i>
+
+              </div>
+
+            </div>
+
+
+            <p class="review-text">
+
+              “From booking the appointment to
+              picking up our dog, everything felt
+              simple and beautifully organised.”
+
+            </p>
+
+
+            <div class="review-author">
+
+              <div class="author-avatar">
+                VM
+              </div>
+
+
+              <div class="author-info">
+
+                <strong>
+                  Vikram M.
+                </strong>
+
+                <span>
+                  Pet parent • Coco
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 04 -->
+
+          <article class="review-card reveal">
+
+            <div class="review-top">
+
+              <div class="review-stars">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+
+              </div>
+
+
+              <div class="review-pet">
+
+                <i class="fa-solid fa-cat"></i>
+
+              </div>
+
+            </div>
+
+
+            <p class="review-text">
+
+              “The attention to detail was wonderful.
+              Even the little paw-care finishing
+              touch made a difference.”
+
+            </p>
+
+
+            <div class="review-author">
+
+              <div class="author-avatar">
+                NP
+              </div>
+
+
+              <div class="author-info">
+
+                <strong>
+                  Neha P.
+                </strong>
+
+                <span>
+                  Pet parent • Luna
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 05 -->
+
+          <article class="review-card reveal">
+
+            <div class="review-top">
+
+              <div class="review-stars">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+
+              </div>
+
+
+              <div class="review-pet">
+
+                <i class="fa-solid fa-dog"></i>
+
+              </div>
+
+            </div>
+
+
+            <p class="review-text">
+
+              “What stood out most was the patience.
+              Our dog can be nervous during grooming,
+              and the team handled him so gently.”
+
+            </p>
+
+
+            <div class="review-author">
+
+              <div class="author-avatar">
+                AD
+              </div>
+
+
+              <div class="author-info">
+
+                <strong>
+                  Arjun D.
+                </strong>
+
+                <span>
+                  Pet parent • Simba
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 06 -->
+
+          <article class="review-card reveal">
+
+            <div class="review-top">
+
+              <div class="review-stars">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+
+              </div>
+
+
+              <div class="review-pet">
+
+                <i class="fa-solid fa-paw"></i>
+
+              </div>
+
+            </div>
+
+
+            <p class="review-text">
+
+              “A lovely concept for pet care. The
+              atmosphere, presentation and grooming
+              experience all feel thoughtfully designed.”
+
+            </p>
+
+
+            <div class="review-author">
+
+              <div class="author-avatar">
+                SK
+              </div>
+
+
+              <div class="author-info">
+
+                <strong>
+                  Sneha K.
+                </strong>
+
+                <span>
+                  Pet parent • Teddy
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             FEATURED REVIEW
+        ================================================== -->
+
+    <section class="featured-review-section">
+
+      <div class="container">
+
+        <div class="featured-review">
+
+
+          <div class="featured-image reveal">
+
+            <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1000&q=85"
+              alt="Happy dog after grooming" loading="lazy">
+
+          </div>
+
+
+          <div class="featured-content reveal">
+
+            <div class="section-tag">
+              A HAPPY MOMENT
+            </div>
+
+
+            <h2>
+              Because their
+              <span>smile says it all.</span>
+            </h2>
+
+
+            <p class="featured-quote">
+
+              “I wanted somewhere that treated my
+              dog like a little personality, not just
+              another appointment. FURLUXE feels
+              exactly like that.”
+
+            </p>
+
+
+            <div class="featured-author">
+
+              <div class="featured-author-avatar">
+                PM
+              </div>
+
+
+              <div>
+
+                <strong>
+                  Priya M.
+                </strong>
+
+                <span>
+                  Pet parent • Max
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             CTA
+        ================================================== -->
+
+    <section class="review-cta">
+
+      <div class="container">
+
+        <div class="review-cta-content reveal">
+
+          <div class="section-tag">
+            YOUR PET DESERVES IT
+          </div>
+
+
+          <h2>
+            Ready for a
+            <span>FURLUXE experience?</span>
+          </h2>
+
+
+          <p>
+            Give your pet a little extra care,
+            comfort and grooming time.
+          </p>
+
+
+          <div class="review-cta-buttons">
+
+            <a href="appointment.html" class="review-btn-primary">
+
+              Book an Appointment
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="services.html" class="review-btn-secondary">
+
+              Explore Services
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo footer-logo">
+
+            <span class="logo-mark">
+              <i class="fa-solid fa-paw"></i>
+            </span>
+
+            <span class="logo-text">
+              FURLUXE
+            </span>
+
+          </a>
+
+
+          <p>
+            Luxury grooming with a softer touch.
+            Thoughtful care for the pets who make
+            life a little better.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+
+              <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="Facebook">
+
+              <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="YouTube">
+
+              <i class="fa-brands fa-youtube"></i>
+
+            </a>
+
+
+            <a href="#" aria-label="WhatsApp">
+
+              <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="grooming.html">
+            Grooming
+          </a>
+
+          <a href="packages.html">
+            Packages
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            FURLUXE
+          </h4>
+
+          <a href="team.html">
+            Our Groomers
+          </a>
+
+          <a href="about.html">
+            Our Story
+          </a>
+
+          <a href="reviews.html">
+            Reviews
+          </a>
+
+          <a href="appointment.html">
+            Appointments
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Support
+          </h4>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+          <a href="help.html">
+            Help Center
+          </a>
+
+          <a href="faq.html">
+            FAQs
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          ©
+          <span id="currentYear"></span>
+          FURLUXE.
+          All rights reserved.
+        </p>
+
+
+        <p>
+          Luxury Grooming. Exceptional Care.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+  <a href="https://wa.me/919999999999?text=Hello%20FURLUXE%2C%20I%20would%20like%20to%20book%20a%20grooming%20appointment."
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with FURLUXE on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>
+      Chat with us
+    </span>
+
+  </a>
+
+
+  <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+  <button class="back-to-top" aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- Main JavaScript -->
+  <script src="js/script.js"></script>
+
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+        const year =
+          document.getElementById(
+            "currentYear"
+          );
+
+        if (year) {
+
+          year.textContent =
+            new Date().getFullYear();
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

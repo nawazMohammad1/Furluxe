@@ -1,0 +1,2459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Explore FURLUXE pet grooming packages. Thoughtful grooming, bathing, paw care and premium finishing for your pet.">
+
+  <meta name="theme-color" content="#18352f">
+
+  <title>
+    Grooming Packages | FURLUXE
+  </title>
+
+
+  <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+    rel="stylesheet">
+
+
+  <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <!-- =====================================================
+         PAGE CSS
+    ====================================================== -->
+
+  <style>
+    /* =================================================
+           HERO
+        ================================================= */
+
+    .packages-hero {
+      position: relative;
+
+      min-height: 70vh;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      background: var(--forest);
+
+      text-align: center;
+    }
+
+
+    .packages-hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 650px;
+      height: 650px;
+
+      left: 50%;
+      top: 50%;
+
+      transform:
+        translate(-50%, -50%);
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.18);
+
+      box-shadow:
+        0 0 0 70px rgba(198, 162, 106, 0.035),
+        0 0 0 140px rgba(198, 162, 106, 0.025);
+    }
+
+
+    .packages-hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 800px;
+
+      margin: auto;
+    }
+
+
+    .packages-hero .section-tag {
+      color: var(--gold-light);
+    }
+
+
+    .packages-hero h1 {
+      margin-top: 20px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(3.2rem, 7vw, 6rem);
+
+      line-height: 0.95;
+
+      letter-spacing: -0.04em;
+    }
+
+
+    .packages-hero h1 span {
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .packages-hero p {
+      max-width: 610px;
+
+      margin: 25px auto 0;
+
+      color:
+        rgba(255, 255, 255, 0.65);
+
+      line-height: 1.85;
+    }
+
+
+    .hero-mini-points {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+
+    .hero-mini-point {
+      display: flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      padding: 9px 15px;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.13);
+
+      border-radius: 50px;
+
+      color:
+        rgba(255, 255, 255, 0.72);
+
+      font-size: 0.65rem;
+    }
+
+
+    .hero-mini-point i {
+      color: var(--gold-light);
+    }
+
+
+    /* =================================================
+           PACKAGES SECTION
+        ================================================= */
+
+    .packages-section {
+      background: var(--ivory);
+    }
+
+
+    .packages-heading {
+      max-width: 700px;
+
+      margin: 0 auto 65px;
+
+      text-align: center;
+    }
+
+
+    .packages-heading h2 {
+      margin-top: 18px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.8rem, 5vw, 4.5rem);
+
+      line-height: 1;
+    }
+
+
+    .packages-heading h2 span {
+      color: var(--gold);
+
+      font-style: italic;
+    }
+
+
+    .packages-heading p {
+      margin-top: 20px;
+
+      color: var(--muted);
+
+      line-height: 1.8;
+    }
+
+
+    /* =================================================
+           PACKAGE CARDS
+        ================================================= */
+
+    .packages-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 22px;
+
+      align-items: stretch;
+    }
+
+
+    .package-card {
+      position: relative;
+
+      display: flex;
+
+      flex-direction: column;
+
+      padding: 38px 32px 32px;
+
+      background: var(--white);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 25px;
+
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+    }
+
+
+    .package-card:hover {
+      transform: translateY(-8px);
+
+      box-shadow:
+        var(--shadow-soft);
+
+      border-color:
+        rgba(198, 162, 106, 0.4);
+    }
+
+
+    .package-card.featured {
+      background: var(--forest);
+
+      border-color: var(--forest);
+
+      transform:
+        translateY(-18px);
+
+      box-shadow:
+        0 25px 70px rgba(24, 53, 47, 0.2);
+    }
+
+
+    .package-card.featured:hover {
+      transform:
+        translateY(-25px);
+    }
+
+
+    .package-badge {
+      position: absolute;
+
+      top: 20px;
+      right: 20px;
+
+      padding: 7px 12px;
+
+      border-radius: 50px;
+
+      background: var(--gold);
+
+      color: var(--white);
+
+      font-size: 0.55rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+    }
+
+
+    .package-icon {
+      width: 58px;
+      height: 58px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--beige-light);
+
+      color: var(--gold);
+
+      font-size: 1.15rem;
+    }
+
+
+    .package-card.featured .package-icon {
+      background:
+        rgba(255, 255, 255, 0.09);
+
+      color: var(--gold-light);
+    }
+
+
+    .package-name {
+      margin-top: 24px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.8rem;
+    }
+
+
+    .package-card.featured .package-name {
+      color: var(--white);
+    }
+
+
+    .package-description {
+      min-height: 60px;
+
+      margin-top: 9px;
+
+      color: var(--muted);
+
+      font-size: 0.7rem;
+
+      line-height: 1.65;
+    }
+
+
+    .package-card.featured .package-description {
+      color:
+        rgba(255, 255, 255, 0.6);
+    }
+
+
+    .package-price {
+      display: flex;
+
+      align-items: baseline;
+
+      gap: 4px;
+
+      margin-top: 22px;
+
+      padding-bottom: 22px;
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .package-card.featured .package-price {
+      border-color:
+        rgba(255, 255, 255, 0.12);
+    }
+
+
+    .package-price .currency {
+      color: var(--gold);
+
+      font-size: 1rem;
+
+      font-weight: 600;
+    }
+
+
+    .package-price .amount {
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 2.8rem;
+
+      font-weight: 600;
+    }
+
+
+    .package-card.featured .package-price .amount {
+      color: var(--white);
+    }
+
+
+    .package-price .duration {
+      color: var(--muted);
+
+      font-size: 0.6rem;
+    }
+
+
+    .package-card.featured .package-price .duration {
+      color:
+        rgba(255, 255, 255, 0.5);
+    }
+
+
+    .package-includes-title {
+      margin-top: 22px;
+
+      color: var(--forest);
+
+      font-size: 0.65rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+    }
+
+
+    .package-card.featured .package-includes-title {
+      color: var(--gold-light);
+    }
+
+
+    .package-features {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 12px;
+
+      margin-top: 15px;
+
+      flex: 1;
+    }
+
+
+    .package-features li {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      color: var(--text);
+
+      font-size: 0.68rem;
+
+      line-height: 1.5;
+    }
+
+
+    .package-card.featured .package-features li {
+      color:
+        rgba(255, 255, 255, 0.72);
+    }
+
+
+    .package-features li i {
+      margin-top: 2px;
+
+      color: var(--gold);
+
+      font-size: 0.6rem;
+    }
+
+
+    .package-card.featured .package-features li i {
+      color: var(--gold-light);
+    }
+
+
+    .package-btn {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 9px;
+
+      width: 100%;
+
+      margin-top: 28px;
+
+      padding: 14px 18px;
+
+      border-radius: 50px;
+
+      background: var(--forest);
+
+      color: var(--white);
+
+      font-size: 0.68rem;
+
+      font-weight: 700;
+
+      text-decoration: none;
+
+      transition:
+        transform var(--transition),
+        background var(--transition);
+    }
+
+
+    .package-btn:hover {
+      background: var(--gold);
+
+      transform: translateY(-2px);
+    }
+
+
+    .package-card.featured .package-btn {
+      background: var(--gold);
+
+      color: var(--white);
+    }
+
+
+    .package-card.featured .package-btn:hover {
+      background: var(--gold-light);
+    }
+
+
+    /* =================================================
+           NOTE
+        ================================================= */
+
+    .pricing-note {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 9px;
+
+      margin-top: 35px;
+
+      color: var(--muted);
+
+      font-size: 0.65rem;
+
+      text-align: center;
+    }
+
+
+    .pricing-note i {
+      color: var(--gold);
+    }
+
+
+    /* =================================================
+           ADD-ONS
+        ================================================= */
+
+    .addons-section {
+      background: var(--white);
+    }
+
+
+    .addons-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 17px;
+
+      margin-top: 50px;
+    }
+
+
+    .addon-card {
+      padding: 27px 23px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 20px;
+
+      background: var(--ivory);
+
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+    }
+
+
+    .addon-card:hover {
+      transform: translateY(-6px);
+
+      box-shadow:
+        var(--shadow-soft);
+    }
+
+
+    .addon-icon {
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--white);
+
+      color: var(--gold);
+    }
+
+
+    .addon-card h3 {
+      margin-top: 17px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.2rem;
+    }
+
+
+    .addon-card p {
+      margin-top: 7px;
+
+      color: var(--muted);
+
+      font-size: 0.65rem;
+
+      line-height: 1.65;
+    }
+
+
+    .addon-price {
+      display: block;
+
+      margin-top: 14px;
+
+      color: var(--gold);
+
+      font-size: 0.72rem;
+
+      font-weight: 700;
+    }
+
+
+    /* =================================================
+           COMPARISON
+        ================================================= */
+
+    .comparison-section {
+      background: var(--ivory);
+
+      overflow: hidden;
+    }
+
+
+    .comparison-wrapper {
+      margin-top: 55px;
+
+      overflow-x: auto;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 22px;
+
+      background: var(--white);
+    }
+
+
+    .comparison-table {
+      width: 100%;
+
+      min-width: 720px;
+
+      border-collapse: collapse;
+    }
+
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 18px 20px;
+
+      text-align: center;
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .comparison-table th:first-child,
+    .comparison-table td:first-child {
+      text-align: left;
+    }
+
+
+    .comparison-table th {
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.05rem;
+    }
+
+
+    .comparison-table th:nth-child(3) {
+      color: var(--gold);
+    }
+
+
+    .comparison-table td {
+      color: var(--muted);
+
+      font-size: 0.68rem;
+    }
+
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+
+    .comparison-table td:first-child {
+      color: var(--text);
+
+      font-weight: 600;
+    }
+
+
+    .comparison-table i {
+      color: var(--gold);
+
+      font-size: 0.75rem;
+    }
+
+
+    .comparison-table .featured-column {
+      background:
+        rgba(198, 162, 106, 0.06);
+    }
+
+
+    /* =================================================
+           FAQ
+        ================================================= */
+
+    .faq-section {
+      background: var(--white);
+    }
+
+
+    .faq-wrapper {
+      max-width: 850px;
+
+      margin: 50px auto 0;
+    }
+
+
+    .faq-item {
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .faq-question {
+      width: 100%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding: 22px 0;
+
+      border: none;
+
+      background: transparent;
+
+      color: var(--forest);
+
+      cursor: pointer;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.15rem;
+
+      text-align: left;
+    }
+
+
+    .faq-question i {
+      flex-shrink: 0;
+
+      color: var(--gold);
+
+      font-size: 0.75rem;
+
+      transition:
+        transform 0.3s ease;
+    }
+
+
+    .faq-item.active .faq-question i {
+      transform:
+        rotate(45deg);
+    }
+
+
+    .faq-answer {
+      display: grid;
+
+      grid-template-rows: 0fr;
+
+      transition:
+        grid-template-rows 0.35s ease;
+    }
+
+
+    .faq-answer-inner {
+      overflow: hidden;
+    }
+
+
+    .faq-answer p {
+      padding-bottom: 22px;
+
+      color: var(--muted);
+
+      font-size: 0.72rem;
+
+      line-height: 1.8;
+    }
+
+
+    .faq-item.active .faq-answer {
+      grid-template-rows: 1fr;
+    }
+
+
+    /* =================================================
+           CTA
+        ================================================= */
+
+    .packages-cta {
+      position: relative;
+
+      padding: 115px 0;
+
+      overflow: hidden;
+
+      background: var(--forest);
+
+      text-align: center;
+    }
+
+
+    .packages-cta::before,
+    .packages-cta::after {
+      content: "";
+
+      position: absolute;
+
+      width: 380px;
+      height: 380px;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.18);
+
+      border-radius: 50%;
+    }
+
+
+    .packages-cta::before {
+      left: -190px;
+      top: -190px;
+    }
+
+
+    .packages-cta::after {
+      right: -190px;
+      bottom: -190px;
+    }
+
+
+    .packages-cta-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 750px;
+
+      margin: auto;
+    }
+
+
+    .packages-cta .section-tag {
+      color: var(--gold-light);
+    }
+
+
+    .packages-cta h2 {
+      margin-top: 18px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.8rem, 6vw, 5rem);
+
+      line-height: 1;
+    }
+
+
+    .packages-cta h2 span {
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .packages-cta p {
+      max-width: 560px;
+
+      margin: 23px auto 0;
+
+      color:
+        rgba(255, 255, 255, 0.62);
+
+      line-height: 1.8;
+    }
+
+
+    .packages-cta .btn {
+      margin-top: 30px;
+    }
+
+
+    /* =================================================
+           RESPONSIVE
+        ================================================= */
+
+    @media (max-width: 1050px) {
+
+      .packages-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .package-card.featured {
+        transform: none;
+      }
+
+      .package-card.featured:hover {
+        transform:
+          translateY(-8px);
+      }
+
+      .addons-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .packages-hero {
+        min-height: 65vh;
+      }
+
+      .packages-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .package-card.featured {
+        transform: none;
+      }
+
+      .addons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-mini-points {
+        flex-direction: column;
+
+        align-items: center;
+      }
+
+      .pricing-note {
+        align-items: flex-start;
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+         PAGE LOADER
+    ====================================================== -->
+
+  <div class="page-loader">
+
+    <div class="loader-content">
+
+      <div class="loader-paw">
+        <i class="fa-solid fa-paw"></i>
+      </div>
+
+      <h2>FURLUXE</h2>
+
+      <p>
+        Luxury Grooming. Exceptional Care.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+  <header class="header">
+
+    <nav class="navbar">
+
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-mark">
+          <i class="fa-solid fa-paw"></i>
+        </span>
+
+        <span class="logo-text">
+          FURLUXE
+        </span>
+
+      </a>
+
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="index.html" class="active">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="services.html">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="grooming.html">
+            Grooming
+          </a>
+        </li>
+
+        <li>
+          <a href="packages.html">
+            Packages
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+
+      <a href="appointment.html" class="nav-book-btn">
+        Book Appointment
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+
+      <button class="menu-toggle" aria-label="Open navigation menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =================================================
+             HERO
+        ================================================== -->
+
+    <section class="packages-hero">
+
+      <div class="container">
+
+        <div class="packages-hero-content reveal">
+
+          <div class="section-tag">
+            FURLUXE PACKAGES
+          </div>
+
+
+          <h1>
+            Thoughtful care,
+            <span>beautifully bundled.</span>
+          </h1>
+
+
+          <p>
+            Choose a grooming package that fits
+            your pet's needs. Every visit combines
+            practical grooming care with the
+            FURLUXE touch.
+          </p>
+
+
+          <div class="hero-mini-points">
+
+            <div class="hero-mini-point">
+
+              <i class="fa-solid fa-paw"></i>
+
+              Pet-first care
+
+            </div>
+
+
+            <div class="hero-mini-point">
+
+              <i class="fa-solid fa-heart"></i>
+
+              Gentle handling
+
+            </div>
+
+
+            <div class="hero-mini-point">
+
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+              Premium finish
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             PACKAGES
+        ================================================== -->
+
+    <section class="section packages-section">
+
+      <div class="container">
+
+
+        <div class="packages-heading reveal">
+
+          <div class="section-tag">
+            CHOOSE THEIR EXPERIENCE
+          </div>
+
+
+          <h2>
+            Simple packages.
+            <span>Beautiful results.</span>
+          </h2>
+
+
+          <p>
+            Start with the package that suits
+            your pet, then personalise their
+            visit with optional add-ons.
+          </p>
+
+        </div>
+
+
+        <div class="packages-grid">
+
+
+          <!-- BASIC -->
+
+          <article class="package-card reveal">
+
+            <div class="package-icon">
+
+              <i class="fa-solid fa-paw"></i>
+
+            </div>
+
+
+            <h3 class="package-name">
+              Fresh & Fluffy
+            </h3>
+
+
+            <p class="package-description">
+              A simple refresh for pets who
+              need a clean, neat and comfortable
+              grooming visit.
+            </p>
+
+
+            <div class="package-price">
+
+              <span class="currency">
+                ₹
+              </span>
+
+              <span class="amount">
+                899
+              </span>
+
+              <span class="duration">
+                / visit
+              </span>
+
+            </div>
+
+
+            <span class="package-includes-title">
+              Includes
+            </span>
+
+
+            <ul class="package-features">
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Gentle bath
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Blow dry
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Basic brushing
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Nail trim
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Paw clean-up
+              </li>
+
+            </ul>
+
+
+            <a href="appointment.html?package=Fresh%20%26%20Fluffy" class="package-btn">
+              Choose Package
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+
+          <!-- PREMIUM -->
+
+          <article class="package-card featured reveal">
+
+            <div class="package-badge">
+              Most Popular
+            </div>
+
+
+            <div class="package-icon">
+
+              <i class="fa-solid fa-crown"></i>
+
+            </div>
+
+
+            <h3 class="package-name">
+              FURLUXE Signature
+            </h3>
+
+
+            <p class="package-description">
+              Our complete grooming experience
+              for pets who deserve a little
+              extra attention.
+            </p>
+
+
+            <div class="package-price">
+
+              <span class="currency">
+                ₹
+              </span>
+
+              <span class="amount">
+                1,499
+              </span>
+
+              <span class="duration">
+                / visit
+              </span>
+
+            </div>
+
+
+            <span class="package-includes-title">
+              Includes
+            </span>
+
+
+            <ul class="package-features">
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Everything in Fresh & Fluffy
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Full coat trim
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Conditioning treatment
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Ear cleaning
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Paw care
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Finishing fragrance
+              </li>
+
+            </ul>
+
+
+            <a href="appointment.html?package=FURLUXE%20Signature" class="package-btn">
+              Choose Package
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+
+          <!-- LUXURY -->
+
+          <article class="package-card reveal">
+
+            <div class="package-icon">
+
+              <i class="fa-solid fa-gem"></i>
+
+            </div>
+
+
+            <h3 class="package-name">
+              Luxe Spa Day
+            </h3>
+
+
+            <p class="package-description">
+              A complete pampering session
+              designed for pets who enjoy
+              the full experience.
+            </p>
+
+
+            <div class="package-price">
+
+              <span class="currency">
+                ₹
+              </span>
+
+              <span class="amount">
+                2,199
+              </span>
+
+              <span class="duration">
+                / visit
+              </span>
+
+            </div>
+
+
+            <span class="package-includes-title">
+              Includes
+            </span>
+
+
+            <ul class="package-features">
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Everything in Signature
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                De-shedding treatment
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Deep conditioning
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Paw moisturising
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Special finishing care
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Relaxing spa touch
+              </li>
+
+            </ul>
+
+
+            <a href="appointment.html?package=Luxe%20Spa%20Day" class="package-btn">
+              Choose Package
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+
+        </div>
+
+
+        <div class="pricing-note">
+
+          <i class="fa-solid fa-circle-info"></i>
+
+          Starting prices shown. Final pricing may
+          vary based on pet size, coat condition and
+          grooming requirements.
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             ADD-ONS
+        ================================================== -->
+
+    <section class="section addons-section">
+
+      <div class="container">
+
+
+        <div class="section-heading centered reveal">
+
+          <div class="section-tag">
+            PERSONALISE THEIR VISIT
+          </div>
+
+
+          <h2>
+            A little
+            <span>extra love.</span>
+          </h2>
+
+
+          <p>
+            Add optional treatments to create
+            a grooming experience that suits
+            your pet.
+          </p>
+
+        </div>
+
+
+        <div class="addons-grid">
+
+
+          <article class="addon-card reveal">
+
+            <div class="addon-icon">
+
+              <i class="fa-solid fa-soap"></i>
+
+            </div>
+
+
+            <h3>
+              Premium Bath
+            </h3>
+
+
+            <p>
+              An upgraded bathing experience
+              with a conditioning finish.
+            </p>
+
+
+            <span class="addon-price">
+              From ₹299
+            </span>
+
+          </article>
+
+
+          <article class="addon-card reveal">
+
+            <div class="addon-icon">
+
+              <i class="fa-solid fa-leaf"></i>
+
+            </div>
+
+
+            <h3>
+              De-Shedding
+            </h3>
+
+
+            <p>
+              Helps remove loose undercoat
+              and keep the coat looking neat.
+            </p>
+
+
+            <span class="addon-price">
+              From ₹399
+            </span>
+
+          </article>
+
+
+          <article class="addon-card reveal">
+
+            <div class="addon-icon">
+
+              <i class="fa-solid fa-hand-holding-heart"></i>
+
+            </div>
+
+
+            <h3>
+              Paw Care
+            </h3>
+
+
+            <p>
+              Gentle paw cleaning and
+              moisturising care.
+            </p>
+
+
+            <span class="addon-price">
+              From ₹199
+            </span>
+
+          </article>
+
+
+          <article class="addon-card reveal">
+
+            <div class="addon-icon">
+
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            </div>
+
+
+            <h3>
+              Finishing Touch
+            </h3>
+
+
+            <p>
+              A polished finishing treatment
+              for a fresh look.
+            </p>
+
+
+            <span class="addon-price">
+              From ₹149
+            </span>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             COMPARISON
+        ================================================== -->
+
+    <section class="section comparison-section">
+
+      <div class="container">
+
+
+        <div class="section-heading centered reveal">
+
+          <div class="section-tag">
+            COMPARE PACKAGES
+          </div>
+
+
+          <h2>
+            Find their
+            <span>perfect fit.</span>
+          </h2>
+
+
+          <p>
+            A quick look at what's included
+            in each grooming experience.
+          </p>
+
+        </div>
+
+
+        <div class="comparison-wrapper reveal">
+
+          <table class="comparison-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Grooming Care
+                </th>
+
+                <th>
+                  Fresh & Fluffy
+                </th>
+
+                <th class="featured-column">
+                  Signature
+                </th>
+
+                <th>
+                  Luxe Spa
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              <tr>
+
+                <td>
+                  Bath & Dry
+                </td>
+
+                <td>
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+                <td class="featured-column">
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+                <td>
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  Brushing
+                </td>
+
+                <td>
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+                <td class="featured-column">
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+                <td>
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  Coat Trim
+                </td>
+
+                <td>
+                  —
+                </td>
+
+                <td class="featured-column">
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+                <td>
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  Nail Care
+                </td>
+
+                <td>
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+                <td class="featured-column">
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+                <td>
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  Ear Cleaning
+                </td>
+
+                <td>
+                  —
+                </td>
+
+                <td class="featured-column">
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+                <td>
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  Conditioning
+                </td>
+
+                <td>
+                  —
+                </td>
+
+                <td class="featured-column">
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+                <td>
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  De-Shedding
+                </td>
+
+                <td>
+                  —
+                </td>
+
+                <td class="featured-column">
+                  —
+                </td>
+
+                <td>
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  Spa Finishing
+                </td>
+
+                <td>
+                  —
+                </td>
+
+                <td class="featured-column">
+                  —
+                </td>
+
+                <td>
+                  <i class="fa-solid fa-check"></i>
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             FAQ
+        ================================================== -->
+
+    <section class="section faq-section">
+
+      <div class="container">
+
+
+        <div class="section-heading centered reveal">
+
+          <div class="section-tag">
+            QUESTIONS
+          </div>
+
+
+          <h2>
+            Before you
+            <span>book.</span>
+          </h2>
+
+
+          <p>
+            A few simple answers to common
+            package questions.
+          </p>
+
+        </div>
+
+
+        <div class="faq-wrapper">
+
+
+          <div class="faq-item reveal">
+
+            <button class="faq-question" type="button">
+
+              Can I customise a package?
+
+              <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+              <div class="faq-answer-inner">
+
+                <p>
+                  Absolutely. You can select
+                  a base package and add
+                  optional treatments based
+                  on your pet's grooming needs.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="faq-item reveal">
+
+            <button class="faq-question" type="button">
+
+              Does pricing depend on pet size?
+
+              <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+              <div class="faq-answer-inner">
+
+                <p>
+                  Yes. Grooming time and
+                  pricing can vary depending
+                  on your pet's size, coat
+                  type, coat condition and
+                  selected services.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="faq-item reveal">
+
+            <button class="faq-question" type="button">
+
+              Can I book a specific groomer?
+
+              <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+              <div class="faq-answer-inner">
+
+                <p>
+                  If your preferred groomer
+                  is available, you can
+                  request them while making
+                  your appointment.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="faq-item reveal">
+
+            <button class="faq-question" type="button">
+
+              How long does grooming take?
+
+              <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+              <div class="faq-answer-inner">
+
+                <p>
+                  The duration depends on
+                  your pet, coat condition
+                  and selected package.
+                  Your appointment details
+                  can be discussed during
+                  booking.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="faq-item reveal">
+
+            <button class="faq-question" type="button">
+
+              What if my pet gets nervous?
+
+              <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+              <div class="faq-answer-inner">
+
+                <p>
+                  Please let us know during
+                  booking. We can take your
+                  pet's temperament and
+                  comfort needs into account
+                  when planning the visit.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             CTA
+        ================================================== -->
+
+    <section class="packages-cta">
+
+      <div class="container">
+
+        <div class="packages-cta-content reveal">
+
+          <div class="section-tag">
+            THEIR NEXT GROOMING DAY
+          </div>
+
+
+          <h2>
+            Choose their
+            <span>FURLUXE moment.</span>
+          </h2>
+
+
+          <p>
+            Select a package, choose a convenient
+            time and let us take care of the rest.
+          </p>
+
+
+          <a href="appointment.html" class="btn btn-light">
+            Book Appointment
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo footer-logo">
+
+            <span class="logo-mark">
+              <i class="fa-solid fa-paw"></i>
+            </span>
+
+            <span class="logo-text">
+              FURLUXE
+            </span>
+
+          </a>
+
+
+          <p>
+            Luxury grooming with a softer touch.
+            Thoughtful care for the pets who make
+            life a little better.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="grooming.html">
+            Grooming
+          </a>
+
+          <a href="packages.html">
+            Packages
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Services
+          </h4>
+
+          <a href="services.html">
+            Full Grooming
+          </a>
+
+          <a href="services.html">
+            Bath & Spa
+          </a>
+
+          <a href="services.html">
+            Nail & Paw Care
+          </a>
+
+          <a href="services.html">
+            De-Shedding
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Visit
+          </h4>
+
+          <a href="appointment.html">
+            Book Appointment
+          </a>
+
+          <a href="contact.html">
+            Contact Us
+          </a>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          © <span id="currentYear"></span>
+          FURLUXE. All rights reserved.
+        </p>
+
+        <p>
+          Luxury Grooming. Exceptional Care.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+  <a href="https://wa.me/919999999999?text=Hello%20FURLUXE%2C%20I%20would%20like%20to%20book%20a%20grooming%20appointment."
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with FURLUXE on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>
+      Chat with us
+    </span>
+
+  </a>
+
+
+  <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+  <button class="back-to-top" aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- =====================================================
+         FAQ JAVASCRIPT
+    ====================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+        /* ==========================================
+           FAQ ACCORDION
+        ========================================== */
+
+        const faqItems =
+          document.querySelectorAll(
+            ".faq-item"
+          );
+
+
+        faqItems.forEach(item => {
+
+          const question =
+            item.querySelector(
+              ".faq-question"
+            );
+
+
+          question.addEventListener(
+            "click",
+            () => {
+
+              const isActive =
+                item.classList.contains(
+                  "active"
+                );
+
+
+              faqItems.forEach(
+                faq => {
+
+                  faq.classList.remove(
+                    "active"
+                  );
+
+                }
+              );
+
+
+              if (!isActive) {
+
+                item.classList.add(
+                  "active"
+                );
+
+              }
+
+            }
+          );
+
+        });
+
+
+        /* ==========================================
+           CURRENT YEAR
+        ========================================== */
+
+        const year =
+          document.getElementById(
+            "currentYear"
+          );
+
+
+        if (year) {
+
+          year.textContent =
+            new Date().getFullYear();
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+  <!-- =====================================================
+         MAIN SCRIPT
+    ====================================================== -->
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

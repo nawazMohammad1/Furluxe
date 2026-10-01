@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Book your pet's grooming appointment with FURLUXE. Choose a grooming package, preferred date and time, and tell us about your pet.">
+
+  <meta name="theme-color" content="#18352f">
+
+  <title>
+    Book Appointment | FURLUXE
+  </title>
+
+
+  <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet">
+
+
+  <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <style>
+    /* =================================================
+           APPOINTMENT PAGE
+        ================================================= */
+
+    .appointment-page {
+      background: var(--ivory);
+    }
+
+
+    /* =================================================
+           HERO
+        ================================================= */
+
+    .appointment-hero {
+      position: relative;
+
+      padding: 150px 0 90px;
+
+      overflow: hidden;
+
+      background: var(--forest);
+
+      text-align: center;
+    }
+
+
+    .appointment-hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      top: -250px;
+      left: -180px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.18);
+    }
+
+
+    .appointment-hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 420px;
+      height: 420px;
+
+      right: -200px;
+      bottom: -260px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.16);
+    }
+
+
+    .appointment-hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 750px;
+
+      margin: auto;
+    }
+
+
+    .appointment-hero .section-tag {
+      color: var(--gold-light);
+    }
+
+
+    .appointment-hero h1 {
+      margin-top: 20px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(3rem, 7vw, 5.8rem);
+
+      line-height: 0.98;
+
+      letter-spacing: -0.04em;
+    }
+
+
+    .appointment-hero h1 span {
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .appointment-hero p {
+      max-width: 590px;
+
+      margin: 24px auto 0;
+
+      color:
+        rgba(255, 255, 255, 0.64);
+
+      line-height: 1.8;
+    }
+
+
+    /* =================================================
+           BOOKING AREA
+        ================================================= */
+
+    .booking-section {
+      padding: 90px 0 120px;
+    }
+
+
+    .booking-layout {
+      display: grid;
+
+      grid-template-columns:
+        0.8fr 1.5fr;
+
+      gap: 35px;
+
+      align-items: start;
+    }
+
+
+    /* =================================================
+           LEFT INFO
+        ================================================= */
+
+    .booking-info {
+      position: sticky;
+
+      top: 110px;
+
+      padding: 38px;
+
+      border-radius: 25px;
+
+      background: var(--forest);
+
+      overflow: hidden;
+    }
+
+
+    .booking-info::before {
+      content: "";
+
+      position: absolute;
+
+      width: 260px;
+      height: 260px;
+
+      right: -130px;
+      top: -130px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(198, 162, 106, 0.18);
+    }
+
+
+    .booking-info-content {
+      position: relative;
+
+      z-index: 2;
+    }
+
+
+    .booking-info .section-tag {
+      color: var(--gold-light);
+    }
+
+
+    .booking-info h2 {
+      margin-top: 18px;
+
+      color: var(--white);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 2.4rem;
+
+      line-height: 1.1;
+    }
+
+
+    .booking-info h2 span {
+      color: var(--gold-light);
+
+      font-style: italic;
+    }
+
+
+    .booking-info>p {
+      margin-top: 17px;
+
+      color:
+        rgba(255, 255, 255, 0.58);
+
+      font-size: 0.72rem;
+
+      line-height: 1.8;
+    }
+
+
+    .booking-benefits {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 18px;
+
+      margin-top: 35px;
+    }
+
+
+    .booking-benefit {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 14px;
+    }
+
+
+    .booking-benefit-icon {
+      width: 42px;
+      height: 42px;
+
+      flex-shrink: 0;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255, 255, 255, 0.08);
+
+      color: var(--gold-light);
+    }
+
+
+    .booking-benefit h4 {
+      color: var(--white);
+
+      font-size: 0.72rem;
+    }
+
+
+    .booking-benefit p {
+      margin-top: 4px;
+
+      color:
+        rgba(255, 255, 255, 0.48);
+
+      font-size: 0.61rem;
+
+      line-height: 1.5;
+    }
+
+
+    .booking-help {
+      margin-top: 35px;
+
+      padding-top: 25px;
+
+      border-top:
+        1px solid rgba(255, 255, 255, 0.1);
+    }
+
+
+    .booking-help span {
+      display: block;
+
+      color:
+        rgba(255, 255, 255, 0.42);
+
+      font-size: 0.58rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    .booking-help a {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      margin-top: 8px;
+
+      color: var(--gold-light);
+
+      font-size: 0.7rem;
+
+      font-weight: 600;
+
+      text-decoration: none;
+    }
+
+
+    /* =================================================
+           FORM CARD
+        ================================================= */
+
+    .booking-form-card {
+      padding: 45px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 27px;
+
+      background: var(--white);
+
+      box-shadow:
+        0 20px 60px rgba(24, 53, 47, 0.06);
+    }
+
+
+    .form-header {
+      padding-bottom: 25px;
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .form-header h2 {
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 2rem;
+    }
+
+
+    .form-header p {
+      margin-top: 7px;
+
+      color: var(--muted);
+
+      font-size: 0.68rem;
+
+      line-height: 1.6;
+    }
+
+
+    /* =================================================
+           FORM SECTIONS
+        ================================================= */
+
+    .form-section {
+      margin-top: 32px;
+    }
+
+
+    .form-section-title {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-bottom: 20px;
+    }
+
+
+    .form-number {
+      width: 28px;
+      height: 28px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--beige-light);
+
+      color: var(--gold);
+
+      font-size: 0.62rem;
+
+      font-weight: 700;
+    }
+
+
+    .form-section-title h3 {
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.2rem;
+    }
+
+
+    .form-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 17px;
+    }
+
+
+    .form-group {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 8px;
+    }
+
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+
+    .form-group label {
+      color: var(--text);
+
+      font-size: 0.64rem;
+
+      font-weight: 700;
+    }
+
+
+    .required {
+      color: var(--gold);
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+
+      padding: 14px 15px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 12px;
+
+      outline: none;
+
+      background: var(--ivory);
+
+      color: var(--text);
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 0.68rem;
+
+      transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    }
+
+
+    .form-group textarea {
+      min-height: 105px;
+
+      resize: vertical;
+    }
+
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+
+      background: var(--white);
+
+      box-shadow:
+        0 0 0 4px rgba(198, 162, 106, 0.09);
+    }
+
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #a9aaa5;
+    }
+
+
+    /* =================================================
+           PACKAGE OPTIONS
+        ================================================= */
+
+    .package-options {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 12px;
+    }
+
+
+    .package-option {
+      position: relative;
+
+      cursor: pointer;
+    }
+
+
+    .package-option input {
+      position: absolute;
+
+      opacity: 0;
+
+      pointer-events: none;
+    }
+
+
+    .package-option-content {
+      min-height: 125px;
+
+      padding: 19px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 16px;
+
+      background: var(--ivory);
+
+      transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+
+    .package-option:hover .package-option-content {
+      transform: translateY(-3px);
+
+      border-color:
+        rgba(198, 162, 106, 0.45);
+    }
+
+
+    .package-option input:checked+.package-option-content {
+      border-color: var(--gold);
+
+      background:
+        rgba(198, 162, 106, 0.08);
+
+      box-shadow:
+        0 8px 25px rgba(198, 162, 106, 0.1);
+    }
+
+
+    .package-option-icon {
+      width: 35px;
+      height: 35px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--white);
+
+      color: var(--gold);
+
+      font-size: 0.7rem;
+    }
+
+
+    .package-option h4 {
+      margin-top: 11px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 0.95rem;
+    }
+
+
+    .package-option p {
+      margin-top: 4px;
+
+      color: var(--muted);
+
+      font-size: 0.57rem;
+    }
+
+
+    .package-option .price {
+      display: block;
+
+      margin-top: 8px;
+
+      color: var(--gold);
+
+      font-size: 0.6rem;
+
+      font-weight: 700;
+    }
+
+
+    /* =================================================
+           PET TYPE
+        ================================================= */
+
+    .pet-type-options {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+    }
+
+
+    .pet-type {
+      cursor: pointer;
+    }
+
+
+    .pet-type input {
+      position: absolute;
+
+      opacity: 0;
+    }
+
+
+    .pet-type-content {
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 11px 16px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 50px;
+
+      background: var(--ivory);
+
+      color: var(--muted);
+
+      font-size: 0.64rem;
+
+      transition:
+        all 0.25s ease;
+    }
+
+
+    .pet-type-content i {
+      color: var(--gold);
+    }
+
+
+    .pet-type input:checked+.pet-type-content {
+      border-color: var(--gold);
+
+      background:
+        rgba(198, 162, 106, 0.1);
+
+      color: var(--forest);
+
+      font-weight: 600;
+    }
+
+
+    /* =================================================
+           CHECKBOX
+        ================================================= */
+
+    .consent-row {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      margin-top: 25px;
+
+      padding-top: 22px;
+
+      border-top:
+        1px solid var(--border);
+    }
+
+
+    .consent-row input {
+      margin-top: 3px;
+
+      accent-color: var(--gold);
+    }
+
+
+    .consent-row label {
+      color: var(--muted);
+
+      font-size: 0.6rem;
+
+      line-height: 1.6;
+
+      cursor: pointer;
+    }
+
+
+    .consent-row a {
+      color: var(--forest);
+
+      font-weight: 600;
+    }
+
+
+    /* =================================================
+           SUBMIT
+        ================================================= */
+
+    .submit-area {
+      margin-top: 28px;
+    }
+
+
+    .submit-btn {
+      width: 100%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      padding: 16px 25px;
+
+      border: none;
+
+      border-radius: 50px;
+
+      background: var(--forest);
+
+      color: var(--white);
+
+      cursor: pointer;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 0.7rem;
+
+      font-weight: 700;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+
+      background: var(--gold);
+
+      box-shadow:
+        0 12px 30px rgba(198, 162, 106, 0.2);
+    }
+
+
+    .submit-btn i {
+      transition:
+        transform 0.25s ease;
+    }
+
+
+    .submit-btn:hover i {
+      transform:
+        translateX(4px);
+    }
+
+
+    .form-note {
+      margin-top: 12px;
+
+      color: var(--muted);
+
+      font-size: 0.56rem;
+
+      text-align: center;
+
+      line-height: 1.6;
+    }
+
+
+    /* =================================================
+           SUCCESS MESSAGE
+        ================================================= */
+
+    .booking-success {
+      display: none;
+
+      margin-top: 25px;
+
+      padding: 20px;
+
+      border:
+        1px solid rgba(72, 150, 110, 0.25);
+
+      border-radius: 15px;
+
+      background:
+        rgba(72, 150, 110, 0.06);
+
+      text-align: center;
+    }
+
+
+    .booking-success.show {
+      display: block;
+
+      animation:
+        successIn 0.5s ease both;
+    }
+
+
+    @keyframes successIn {
+
+      from {
+        opacity: 0;
+
+        transform:
+          translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+
+        transform:
+          translateY(0);
+      }
+
+    }
+
+
+    .success-icon {
+      width: 48px;
+      height: 48px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin: 0 auto;
+
+      border-radius: 50%;
+
+      background: rgba(72, 150, 110, 0.1);
+
+      color: #4f9b75;
+    }
+
+
+    .booking-success h3 {
+      margin-top: 13px;
+
+      color: var(--forest);
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.35rem;
+    }
+
+
+    .booking-success p {
+      margin-top: 6px;
+
+      color: var(--muted);
+
+      font-size: 0.63rem;
+
+      line-height: 1.6;
+    }
+
+
+    /* =================================================
+           MOBILE
+        ================================================= */
+
+    @media (max-width: 950px) {
+
+      .booking-layout {
+        grid-template-columns: 1fr;
+      }
+
+
+      .booking-info {
+        position: relative;
+
+        top: auto;
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .appointment-hero {
+        padding:
+          125px 0 70px;
+      }
+
+
+      .booking-section {
+        padding:
+          65px 0 80px;
+      }
+
+
+      .booking-form-card {
+        padding: 28px 20px;
+      }
+
+
+      .booking-info {
+        padding: 28px 22px;
+      }
+
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+
+      .package-options {
+        grid-template-columns: 1fr;
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body class="appointment-page">
+
+
+  <!-- =====================================================
+         LOADER
+    ====================================================== -->
+
+  <div class="page-loader">
+
+    <div class="loader-content">
+
+      <div class="loader-paw">
+        <i class="fa-solid fa-paw"></i>
+      </div>
+
+      <h2>
+        FURLUXE
+      </h2>
+
+      <p>
+        Luxury Grooming. Exceptional Care.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+  <header class="header">
+
+    <nav class="navbar">
+
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-mark">
+          <i class="fa-solid fa-paw"></i>
+        </span>
+
+        <span class="logo-text">
+          FURLUXE
+        </span>
+
+      </a>
+
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="index.html" class="active">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="services.html">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="grooming.html">
+            Grooming
+          </a>
+        </li>
+
+        <li>
+          <a href="packages.html">
+            Packages
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+
+      <a href="appointment.html" class="nav-book-btn active">
+        Book Appointment
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+
+      <button class="menu-toggle" aria-label="Open navigation menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =================================================
+             HERO
+        ================================================== -->
+
+    <section class="appointment-hero">
+
+      <div class="container">
+
+        <div class="appointment-hero-content reveal">
+
+          <div class="section-tag">
+            FURLUXE APPOINTMENTS
+          </div>
+
+
+          <h1>
+            Their next
+            <span>happy day.</span>
+          </h1>
+
+
+          <p>
+            Tell us a little about your pet,
+            choose their grooming experience,
+            and select a convenient time.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             BOOKING SECTION
+        ================================================== -->
+
+    <section class="booking-section">
+
+      <div class="container">
+
+        <div class="booking-layout">
+
+
+          <!-- =====================================
+                         LEFT INFORMATION
+                    ====================================== -->
+
+          <aside class="booking-info reveal">
+
+            <div class="booking-info-content">
+
+              <div class="section-tag">
+                EASY BOOKING
+              </div>
+
+
+              <h2>
+                A smoother
+                <span>grooming day.</span>
+              </h2>
+              <br>
+              <p>
+                We keep booking simple so you
+                can spend less time planning
+                and more time enjoying your
+                freshly groomed companion.
+              </p>
+
+
+              <div class="booking-benefits">
+
+
+                <div class="booking-benefit">
+
+                  <div class="booking-benefit-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                  </div>
+
+
+                  <div>
+
+                    <h4>
+                      Convenient appointments
+                    </h4>
+
+                    <p>
+                      Choose a date and
+                      preferred time that
+                      works for you.
+                    </p>
+
+                  </div>
+
+                </div>
+
+
+                <div class="booking-benefit">
+
+                  <div class="booking-benefit-icon">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                  </div>
+
+
+                  <div>
+
+                    <h4>
+                      Pet-first care
+                    </h4>
+
+                    <p>
+                      Share your pet's
+                      needs with us before
+                      their visit.
+                    </p>
+
+                  </div>
+
+                </div>
+
+
+                <div class="booking-benefit">
+
+                  <div class="booking-benefit-icon">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                  </div>
+
+
+                  <div>
+
+                    <h4>
+                      Premium grooming
+                    </h4>
+
+                    <p>
+                      Thoughtful grooming
+                      with attention to
+                      every detail.
+                    </p>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+
+
+              <div class="booking-help">
+
+                <span>
+                  Need help choosing?
+                </span>
+
+
+                <a href="https://wa.me/919999999999" target="_blank" rel="noopener">
+
+                  <i class="fa-brands fa-whatsapp"></i>
+
+                  Chat with FURLUXE
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </aside>
+
+
+          <!-- =====================================
+                         FORM
+                    ====================================== -->
+
+          <div class="booking-form-card reveal">
+
+            <div class="form-header">
+
+              <h2>
+                Book an Appointment
+              </h2>
+
+
+              <p>
+                Please fill in the details
+                below. We'll use them to
+                prepare for your pet's visit.
+              </p>
+
+            </div>
+
+
+            <form id="appointmentForm" novalidate>
+
+
+              <!-- =================================
+                                 PACKAGE
+                            ================================== -->
+
+              <div class="form-section">
+
+                <div class="form-section-title">
+
+                  <span class="form-number">
+                    01
+                  </span>
+
+                  <h3>
+                    Choose a package
+                  </h3>
+
+                </div>
+
+
+                <div class="package-options">
+
+
+                  <label class="package-option">
+
+                    <input type="radio" name="package" value="Fresh & Fluffy" required>
+
+
+                    <div class="package-option-content">
+
+                      <div class="package-option-icon">
+
+                        <i class="fa-solid fa-paw"></i>
+
+                      </div>
+
+
+                      <h4>
+                        Fresh & Fluffy
+                      </h4>
+
+
+                      <p>
+                        Essential grooming
+                      </p>
+
+
+                      <span class="price">
+                        From ₹899
+                      </span>
+
+                    </div>
+
+                  </label>
+
+
+                  <label class="package-option">
+
+                    <input type="radio" name="package" value="FURLUXE Signature">
+
+
+                    <div class="package-option-content">
+
+                      <div class="package-option-icon">
+
+                        <i class="fa-solid fa-crown"></i>
+
+                      </div>
+
+
+                      <h4>
+                        Signature
+                      </h4>
+
+
+                      <p>
+                        Complete grooming
+                      </p>
+
+
+                      <span class="price">
+                        From ₹1,499
+                      </span>
+
+                    </div>
+
+                  </label>
+
+
+                  <label class="package-option">
+
+                    <input type="radio" name="package" value="Luxe Spa Day">
+
+
+                    <div class="package-option-content">
+
+                      <div class="package-option-icon">
+
+                        <i class="fa-solid fa-gem"></i>
+
+                      </div>
+
+
+                      <h4>
+                        Luxe Spa Day
+                      </h4>
+
+
+                      <p>
+                        Full pampering
+                      </p>
+
+
+                      <span class="price">
+                        From ₹2,199
+                      </span>
+
+                    </div>
+
+                  </label>
+
+
+                </div>
+
+              </div>
+
+
+              <!-- =================================
+                                 PET DETAILS
+                            ================================== -->
+
+              <div class="form-section">
+
+                <div class="form-section-title">
+
+                  <span class="form-number">
+                    02
+                  </span>
+
+                  <h3>
+                    About your pet
+                  </h3>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                  <div class="form-group">
+
+                    <label for="petName">
+                      Pet Name
+                      <span class="required">
+                        *
+                      </span>
+                    </label>
+
+
+                    <input type="text" id="petName" name="petName" placeholder="e.g. Bruno" required>
+
+                  </div>
+
+
+                  <div class="form-group">
+
+                    <label>
+                      Pet Type
+                      <span class="required">
+                        *
+                      </span>
+                    </label>
+
+
+                    <div class="pet-type-options">
+
+
+                      <label class="pet-type">
+
+                        <input type="radio" name="petType" value="Dog" required>
+
+
+                        <span class="pet-type-content">
+
+                          <i class="fa-solid fa-dog"></i>
+
+                          Dog
+
+                        </span>
+
+                      </label>
+
+
+                      <label class="pet-type">
+
+                        <input type="radio" name="petType" value="Cat">
+
+
+                        <span class="pet-type-content">
+
+                          <i class="fa-solid fa-cat"></i>
+
+                          Cat
+
+                        </span>
+
+                      </label>
+
+
+                      <label class="pet-type">
+
+                        <input type="radio" name="petType" value="Other">
+
+
+                        <span class="pet-type-content">
+
+                          <i class="fa-solid fa-paw"></i>
+
+                          Other
+
+                        </span>
+
+                      </label>
+
+
+                    </div>
+
+                  </div>
+
+
+                  <div class="form-group">
+
+                    <label for="breed">
+                      Breed
+                    </label>
+
+
+                    <input type="text" id="breed" name="breed" placeholder="e.g. Golden Retriever">
+
+                  </div>
+
+
+                  <div class="form-group">
+
+                    <label for="petAge">
+                      Pet Age
+                    </label>
+
+
+                    <input type="text" id="petAge" name="petAge" placeholder="e.g. 3 years">
+
+                  </div>
+
+
+                  <div class="form-group full">
+
+                    <label for="petNotes">
+                      Anything we should know?
+                    </label>
+
+
+                    <textarea id="petNotes" name="petNotes"
+                      placeholder="Tell us about coat condition, temperament, special care needs, previous grooming experience, etc."></textarea>
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+
+              <!-- =================================
+                                 OWNER DETAILS
+                            ================================== -->
+
+              <div class="form-section">
+
+                <div class="form-section-title">
+
+                  <span class="form-number">
+                    03
+                  </span>
+
+                  <h3>
+                    Your details
+                  </h3>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                  <div class="form-group">
+
+                    <label for="ownerName">
+                      Your Name
+                      <span class="required">
+                        *
+                      </span>
+                    </label>
+
+
+                    <input type="text" id="ownerName" name="ownerName" placeholder="Your full name" required>
+
+                  </div>
+
+
+                  <div class="form-group">
+
+                    <label for="phone">
+                      Phone Number
+                      <span class="required">
+                        *
+                      </span>
+                    </label>
+
+
+                    <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+
+                  </div>
+
+
+                  <div class="form-group full">
+
+                    <label for="email">
+                      Email Address
+                    </label>
+
+
+                    <input type="email" id="email" name="email" placeholder="you@example.com">
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+
+              <!-- =================================
+                                 DATE & TIME
+                            ================================== -->
+
+              <div class="form-section">
+
+                <div class="form-section-title">
+
+                  <span class="form-number">
+                    04
+                  </span>
+
+                  <h3>
+                    Choose your time
+                  </h3>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                  <div class="form-group">
+
+                    <label for="date">
+                      Preferred Date
+                      <span class="required">
+                        *
+                      </span>
+                    </label>
+
+
+                    <input type="date" id="date" name="date" required>
+
+                  </div>
+
+
+                  <div class="form-group">
+
+                    <label for="time">
+                      Preferred Time
+                      <span class="required">
+                        *
+                      </span>
+                    </label>
+
+
+                    <select id="time" name="time" required>
+
+                      <option value="">
+                        Select a time
+                      </option>
+
+                      <option value="09:00 AM">
+                        09:00 AM
+                      </option>
+
+                      <option value="10:00 AM">
+                        10:00 AM
+                      </option>
+
+                      <option value="11:00 AM">
+                        11:00 AM
+                      </option>
+
+                      <option value="12:00 PM">
+                        12:00 PM
+                      </option>
+
+                      <option value="02:00 PM">
+                        02:00 PM
+                      </option>
+
+                      <option value="03:00 PM">
+                        03:00 PM
+                      </option>
+
+                      <option value="04:00 PM">
+                        04:00 PM
+                      </option>
+
+                      <option value="05:00 PM">
+                        05:00 PM
+                      </option>
+
+                      <option value="06:00 PM">
+                        06:00 PM
+                      </option>
+
+                    </select>
+
+                  </div>
+
+
+                  <div class="form-group full">
+
+                    <label for="address">
+                      Pickup / Home Address
+                      <span style="
+                                                    color:#9a9a94;
+                                                    font-weight:400;
+                                                ">
+                        Optional
+                      </span>
+                    </label>
+
+
+                    <textarea id="address" name="address"
+                      placeholder="Enter your address if home service is required."></textarea>
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+
+              <!-- =================================
+                                 CONSENT
+                            ================================== -->
+
+              <div class="consent-row">
+
+                <input type="checkbox" id="consent" name="consent" required>
+
+
+                <label for="consent">
+
+                  I confirm that the information
+                  provided is correct and agree
+                  to the FURLUXE
+                  <a href="booking-terms.html">
+                    booking terms
+                  </a>
+                  and
+                  <a href="privacy.html">
+                    privacy policy
+                  </a>.
+
+                </label>
+
+              </div>
+
+
+              <!-- =================================
+                                 SUBMIT
+                            ================================== -->
+
+              <div class="submit-area">
+
+                <button type="submit" class="submit-btn">
+
+                  Confirm Appointment Request
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <p class="form-note">
+
+                  Your appointment is a request
+                  until confirmed by the FURLUXE
+                  team.
+
+                </p>
+
+              </div>
+
+
+              <!-- =================================
+                                 SUCCESS
+                            ================================== -->
+
+              <div class="booking-success" id="bookingSuccess">
+
+                <div class="success-icon">
+
+                  <i class="fa-solid fa-check"></i>
+
+                </div>
+
+
+                <h3>
+                  Request Received!
+                </h3>
+
+
+                <p>
+                  Thank you for choosing
+                  FURLUXE. We'll contact you
+                  shortly to confirm your
+                  appointment.
+                </p>
+
+              </div>
+
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo footer-logo">
+
+            <span class="logo-mark">
+              <i class="fa-solid fa-paw"></i>
+            </span>
+
+            <span class="logo-text">
+              FURLUXE
+            </span>
+
+          </a>
+
+
+          <p>
+            Luxury grooming with a softer touch.
+            Thoughtful care for the pets who make
+            life a little better.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+
+            <a href="#" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+
+            <a href="#" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="grooming.html">
+            Grooming
+          </a>
+
+          <a href="packages.html">
+            Packages
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Services
+          </h4>
+
+          <a href="services.html">
+            Full Grooming
+          </a>
+
+          <a href="services.html">
+            Bath & Spa
+          </a>
+
+          <a href="services.html">
+            Nail & Paw Care
+          </a>
+
+          <a href="services.html">
+            De-Shedding
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Visit
+          </h4>
+
+          <a href="appointment.html">
+            Book Appointment
+          </a>
+
+          <a href="contact.html">
+            Contact Us
+          </a>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          ©
+          <span id="currentYear"></span>
+          FURLUXE.
+          All rights reserved.
+        </p>
+
+
+        <p>
+          Luxury Grooming. Exceptional Care.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+  <a href="https://wa.me/919999999999?text=Hello%20FURLUXE%2C%20I%20would%20like%20to%20book%20a%20grooming%20appointment."
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with FURLUXE on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>
+      Chat with us
+    </span>
+
+  </a>
+
+
+  <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+  <button class="back-to-top" aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- =====================================================
+         APPOINTMENT JAVASCRIPT
+    ====================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+
+        /* ==========================================
+           CURRENT YEAR
+        ========================================== */
+
+        const year =
+          document.getElementById(
+            "currentYear"
+          );
+
+
+        if (year) {
+
+          year.textContent =
+            new Date().getFullYear();
+
+        }
+
+
+        /* ==========================================
+           MINIMUM DATE
+        ========================================== */
+
+        const dateInput =
+          document.getElementById("date");
+
+
+        if (dateInput) {
+
+          const today =
+            new Date();
+
+
+          const yearValue =
+            today.getFullYear();
+
+
+          const monthValue =
+            String(
+              today.getMonth() + 1
+            ).padStart(2, "0");
+
+
+          const dayValue =
+            String(
+              today.getDate()
+            ).padStart(2, "0");
+
+
+          dateInput.min =
+            `${yearValue}-${monthValue}-${dayValue}`;
+
+        }
+
+
+        /* ==========================================
+           PACKAGE FROM URL
+        ========================================== */
+
+        const urlParams =
+          new URLSearchParams(
+            window.location.search
+          );
+
+
+        const selectedPackage =
+          urlParams.get("package");
+
+
+        if (selectedPackage) {
+
+          const packageInput =
+            document.querySelector(
+              `input[name="package"][value="${selectedPackage}"]`
+            );
+
+
+          if (packageInput) {
+
+            packageInput.checked = true;
+
+          }
+
+        }
+
+
+        /* ==========================================
+           FORM SUBMISSION
+        ========================================== */
+
+        const form =
+          document.getElementById(
+            "appointmentForm"
+          );
+
+
+        const success =
+          document.getElementById(
+            "bookingSuccess"
+          );
+
+
+        if (form) {
+
+          form.addEventListener(
+            "submit",
+            function (event) {
+
+              event.preventDefault();
+
+
+              if (!form.checkValidity()) {
+
+                form.reportValidity();
+
+                return;
+
+              }
+
+
+              const submitButton =
+                form.querySelector(
+                  ".submit-btn"
+                );
+
+
+              submitButton.innerHTML = `
+                                <i class="fa-solid fa-spinner fa-spin"></i>
+                                Sending Request...
+                            `;
+
+
+              submitButton.disabled = true;
+
+
+              setTimeout(
+                () => {
+
+                  success.classList.add(
+                    "show"
+                  );
+
+
+                  success.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                  });
+
+
+                  submitButton.innerHTML = `
+                                        Request Submitted
+                                        <i class="fa-solid fa-check"></i>
+                                    `;
+
+
+                },
+                1200
+              );
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+  <!-- =====================================================
+         MAIN SCRIPT
+    ====================================================== -->
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
